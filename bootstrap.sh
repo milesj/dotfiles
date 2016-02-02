@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# TODO - Setup git email
+
 # BOOTSTRAP
 # Install the dotfiles by symlinking them to the users folder.
 

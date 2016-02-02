@@ -1,0 +1,42 @@
+[user]
+    name = Miles Johnson
+[core]
+    editor = vim
+    excludesFile = ~/.gitignore_global
+    whitespace = space-before-tab,trailing-space
+    filemode = false
+    # Make `git rebase` safer on OSX: <http://www.git-tower.com/blog/make-git-rebase-safe-on-osx/>
+    trustctime = false
+[push]
+    default = current
+    followTags = true
+[pull]
+    ff = false
+[rerere]
+    enabled = true
+[color]
+    ui = true
+    diff = auto
+    grep = auto
+    pager = true
+    status = auto
+    branch = auto
+[help]
+    autoCorrect = true
+[merge]
+    log = true
+[mergetool]
+    prompt = false
+    keepBackup = false
+[diff]
+    renames = copies
+[difftool]
+    prompt = false
+[fetch]
+    recurseSubmodules = on-demand
+[log]
+    decorate = full
+[status]
+    submoduleSummary = true
+[apply]
+    whitespace = fix
