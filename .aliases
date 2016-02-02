@@ -1,0 +1,39 @@
+# ALIASES
+# All command aliases should be defined here.
+
+if ls --color > /dev/null 2>&1; then
+    color_flag="--color";
+else
+    color_flag="-G";
+fi;
+
+# File system
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias ~="cd ~/"
+alias ~s="cd ~/Sites"
+alias mv="mv -v"
+alias rm="rm -i -v"
+alias cp="cp -v"
+alias fs="stat -f \"%z bytes\""
+
+# Networking
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias dig="dig +nocmd any +multiline +noall +answer"
+
+# Shortcuts
+alias g="git"
+alias v="vim"
+alias l="ls -FlAhp ${color_flag}"
+alias s="grep --color=auto"
+alias k9="kill -9"
+alias psa="ps aux"
+alias where=which
+
+# GIT
+alias gcob="git checkout -b -t"
+alias gds="git diff --staged"
+alias gplr="git pull --rebase"
+alias guix="git update-index --chmod=+x"

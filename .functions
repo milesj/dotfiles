@@ -1,0 +1,7 @@
+# FUNCTIONS
+# All bash functions should be defined here.
+
+# Check if a command exists
+exists() {
+    command -v "$1" >/dev/null 2>&1
+}

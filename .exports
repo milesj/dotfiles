@@ -1,0 +1,14 @@
+# EXPORTS
+# All configuration related to exports should be defined here.
+
+export PATH="$HOME/bin:/usr/local/sbin:$PATH";
+export EDITOR="vim" # atom
+
+# Terminal
+export PS1="\u:\w$ "
+export CLICOLOR=1
+export LSCOLORS=gxfxcxdxbxegedabagacad
+
+# Programs
+export GREP_OPTIONS="--no-messages —color=auto"
+export HISTCONTROL=ignorespace:ignoredups
