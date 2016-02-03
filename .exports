@@ -5,7 +5,8 @@ export PATH="$HOME/bin:/usr/local/sbin:$PATH";
 export EDITOR="vim" # atom
 
 # Terminal
-export PS1="\u:\w$ "
+# ANSI: http://misc.flogisoft.com/bash/tip_colors_and_formatting
+export PS1="\e[91m[\t]\e[0m \e[92m\u\e[0m:\e[96m\W\e[0m \e[1;93m>\e[0m "
 export CLICOLOR=1
 export LSCOLORS=gxfxcxdxbxegedabagacad
 
