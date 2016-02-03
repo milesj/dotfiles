@@ -24,7 +24,7 @@ alias dig="dig +nocmd any +multiline +noall +answer"
 # Shortcuts
 alias g="git"
 alias v="vim"
-alias l="ls -FlAhpG"
+alias l="ls -lahpFG"
 alias s="grep --color=auto"
 alias k9="kill -9"
 alias psa="ps aux"

@@ -6,9 +6,10 @@ export EDITOR="vim" # atom
 
 # Terminal
 # ANSI: http://misc.flogisoft.com/bash/tip_colors_and_formatting
-export PS1="\e[91m[\t]\e[0m \e[92m\u\e[0m:\e[96m\W\e[0m \e[1;93m>\e[0m "
+# Prompt: http://www.cyberciti.biz/tips/howto-linux-unix-bash-shell-setup-prompt.html
+export PS1="\e[95m[\t]\e[0m \e[96m\u\e[0m:\e[92m\W\e[0m \e[1;93m>\e[0m "
 export CLICOLOR=1
-export LSCOLORS=gxfxcxdxbxegedabagacad
+export LSCOLORS=gxfxexcxbxdxdxabaBagaG
 
 # Programs
 export GREP_OPTIONS="—color=auto"
