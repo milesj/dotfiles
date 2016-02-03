@@ -32,7 +32,7 @@ alias k9="kill -9"
 alias psa="ps aux"
 alias where=which
 
-# GIT
+# Git
 alias gcob="git checkout -b -t"
 alias gds="git diff --staged"
 alias gplr="git pull --rebase"

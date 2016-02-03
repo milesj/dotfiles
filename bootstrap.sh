@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 # TODO - Setup git email
+# TODO - Symlink atom config
 
 # BOOTSTRAP
 # Install the dotfiles by symlinking them to the users folder.

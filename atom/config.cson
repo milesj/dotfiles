@@ -1,0 +1,29 @@
+"*":
+  "autocomplete-plus": {}
+  core:
+    projectHome: "~/Sites/"
+  editor:
+    backUpBeforeSaving: true
+    invisibles:
+      cr: "↩"
+      eol: "↵"
+      tab: "⟶"
+    scrollPastEnd: true
+    showIndentGuide: true
+    showInvisibles: true
+    softWrapAtPreferredLineLength: true
+    tabLength: 4
+  "exception-reporting":
+    userId: "2bf789d1-69e6-8abe-aec6-633f0f274810"
+  "find-and-replace":
+    focusEditorAfterSearch: true
+    openProjectFindResultsInRightPane: true
+  "git-diff": {}
+  "one-dark-ui": {}
+  "status-bar": {}
+  tabs:
+    enableVcsColoring: true
+  "tree-view":
+    hideIgnoredNames: true
+  welcome:
+    showOnStartup: false
