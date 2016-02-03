@@ -6,12 +6,7 @@
 dots="$HOME/.dotfiles";
 
 # Symlink dotfiles
-if [ -d "$dots" ]; then
-    echo "···· Linking dotfiles";
-else
-    echo "···· ~/.dotfiles/ does not exist!";
-    exit 1;
-fi;
+echo "···· Linking dotfiles";
 
 for from in $(find $dots -name ".*" -type f -maxdepth 1); do
     file="${from##*/}";
