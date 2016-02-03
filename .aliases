@@ -30,7 +30,9 @@ alias l="ls -FlAhp ${color_flag}"
 alias s="grep --color=auto"
 alias k9="kill -9"
 alias psa="ps aux"
-alias where=which
+alias tailf="tail -f"
+alias where="which"
+alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '=> SSH pub key copied to clipboard.'"
 
 # Git
 alias gcob="git checkout -b -t"

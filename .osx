@@ -1,0 +1,99 @@
+# OSX
+# Settings for customizing OSX.
+
+# Use AirDrop over every interface.
+defaults write com.apple.NetworkBrowser BrowseAllInterfaces 1
+
+# Disable smart characters as they’re annoying when typing code.
+defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
+defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
+
+# Reveal IP address, hostname, OS version, etc. when clicking the clock in the login window.
+sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
+
+###############################################################################
+# Applications                                                                #
+###############################################################################
+
+# Set up Safari for development.
+defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
+defaults write com.apple.Safari IncludeDevelopMenu -bool true
+defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
+defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
+
+# Only use UTF-8 in Terminal.
+defaults write com.apple.terminal StringEncodings -array 4
+
+###############################################################################
+# Peripherals                                                                 #
+###############################################################################
+
+# Increase sound quality for Bluetooth headphones/headsets.
+defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
+
+# Disable press-and-hold for keys in favor of key repeat
+defaults write -g ApplePressAndHoldEnabled -bool false
+defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
+
+###############################################################################
+# Screen                                                                      #
+###############################################################################
+
+# Save screenshots in PNG format.
+defaults write com.apple.screencapture type -string "png"
+
+# Disable shadow in screenshots.
+defaults write com.apple.screencapture disable-shadow -bool true
+
+# Enable subpixel font rendering on non-Apple LCDs.
+defaults write NSGlobalDomain AppleFontSmoothing -int 2
+
+###############################################################################
+# Finder, Filesystem                                                          #
+###############################################################################
+
+# Allow quitting via command + Q; doing so will also hide desktop icons.
+defaults write com.apple.finder QuitMenuItem -bool true
+
+# Disable window animations and get info animations.
+defaults write com.apple.finder DisableAllAnimations -bool true
+
+# Show icons for hard drives, servers, and removable media on the desktop.
+defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
+defaults write com.apple.finder ShowHardDrivesOnDesktop -bool true
+defaults write com.apple.finder ShowMountedServersOnDesktop -bool true
+defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
+
+# Show hidden files.
+defaults write com.apple.finder AppleShowAllFiles -bool true
+
+# Show all filename extensions.
+defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+
+# Show status bar.
+defaults write com.apple.finder ShowStatusBar -bool true
+
+# Show path bar.
+defaults write com.apple.finder ShowPathbar -bool true
+
+# Avoid creating .DS_Store files on network volumes.
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+
+# Automatically open a new Finder window when a volume is mounted.
+defaults write com.apple.frameworks.diskimages auto-open-ro-root -bool true
+defaults write com.apple.frameworks.diskimages auto-open-rw-root -bool true
+defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool true
+
+# Save to disk (not to iCloud) by default.
+defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
+
+# Show the ~/Library folder.
+chflags nohidden ~/Library
+
+###############################################################################
+# Kill And Restart                                                            #
+###############################################################################
+
+for app in "cfprefsd" "Finder" "Safari" "SystemUIServer" "Terminal"; do
+    killall "${app}" &> /dev/null;
+done;
