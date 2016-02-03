@@ -5,6 +5,11 @@
 
 dots="$HOME/.dotfiles";
 
+function symlink {
+    rm -f "$2"
+    ln -sf "$1" "$2"
+}
+
 # Symlink dotfiles
 echo "···· Linking dotfiles";
 
@@ -16,15 +21,13 @@ for from in $(find $dots -name ".*" -type f -maxdepth 1); do
       continue;
     fi;
 
-    rm -f "$to";
-    ln -sf "$from" "$to";
-
     echo "        $file --> $to";
+    symlink $from $to;
 done
 
 # Symlink certain files manually
 echo "···· Linking Atom config"
-ln -sf "$dots/atom/config.cson" "$HOME/.atom/config.cson"
+symlink "$dots/atom/config.cson" "$HOME/.atom/config.cson"
 
 # Source the profile
 echo "···· Setting up Bash"

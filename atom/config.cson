@@ -1,5 +1,7 @@
 "*":
   "autocomplete-plus": {}
+  autosave:
+    enabled: true
   core:
     projectHome: "~/Sites/"
   editor:
@@ -18,7 +20,8 @@
   "find-and-replace":
     focusEditorAfterSearch: true
     openProjectFindResultsInRightPane: true
-  "git-diff": {}
+  "git-diff":
+    showIconsInEditorGutter: true
   "one-dark-ui": {}
   "status-bar": {}
   tabs:
