@@ -26,13 +26,5 @@ for from in $(find $dots -name ".*" -type f -maxdepth 1); do
     echo "    $file --> $to";
 done
 
-# Install SCM breeze
-cd $dots;
-git submodule update --init
-
-if [ ! -L "$HOME/.scm_breeze" ]; then
-  ln -s "$dots/.scm_breeze" "$HOME/.scm_breeze";
-fi
-
 # Source the profile
 source "$HOME/.bash_profile"

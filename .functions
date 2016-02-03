@@ -1,7 +1,12 @@
 # FUNCTIONS
 # All bash functions should be defined here.
 
-# Check if a command exists
-exists() {
+# Check if a command exists.
+function exists() {
     command -v "$1" >/dev/null 2>&1
+}
+
+# Search the git commit log for a message.
+function glf() {
+    git log --all --grep="$1";
 }
