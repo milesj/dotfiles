@@ -3,7 +3,7 @@
 
 # Check if a command exists.
 function exists() {
-    command -v "$1" >/dev/null 2>&1
+    command -v "$1" >/dev/null 2>&1;
 }
 
 # Search the git commit log for a message.

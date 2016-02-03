@@ -94,6 +94,6 @@ chflags nohidden ~/Library
 # Kill And Restart                                                            #
 ###############################################################################
 
-for app in "cfprefsd" "Finder" "Safari" "SystemUIServer" "Terminal"; do
+for app in "cfprefsd" "Finder" "Safari" "SystemUIServer"; do
     killall "${app}" &> /dev/null;
 done;

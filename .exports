@@ -11,5 +11,5 @@ export CLICOLOR=1
 export LSCOLORS=gxfxcxdxbxegedabagacad
 
 # Programs
-export GREP_OPTIONS="--no-messages —color=auto"
+export GREP_OPTIONS="—color=auto"
 export HISTCONTROL=ignorespace:ignoredups
