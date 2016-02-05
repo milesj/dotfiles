@@ -16,6 +16,7 @@ brew upgrade --all
 # Clean old packages
 echo "···· Cleaning up"
 brew cleanup
+brew cask cleanup
 brew doctor
 
 # 2) Update git
