@@ -53,6 +53,7 @@ brew cask install virtualbox
 brew cask install vagrant
 brew cask install steam
 brew cask install battle-net
+brew cask install vlc
 
 # Clean old packages
 echo "···· Verifying install"
