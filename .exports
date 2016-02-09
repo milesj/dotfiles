@@ -3,6 +3,7 @@
 
 export PATH="$HOME/bin:/usr/local/sbin:$PATH";
 export EDITOR="vim" # atom
+export HISTCONTROL=ignorespace:ignoredups
 
 # Terminal
 # ANSI: http://misc.flogisoft.com/bash/tip_colors_and_formatting
@@ -10,7 +11,3 @@ export EDITOR="vim" # atom
 export PS1="\e[95m[\t]\e[0m \e[96m\u\e[0m:\e[92m\W\e[0m \e[1;93m>\e[0m "
 export CLICOLOR=1
 export LSCOLORS=gxfxexcxbxdxdxabaBagaG
-
-# Programs
-export GREP_OPTIONS="—color=auto"
-export HISTCONTROL=ignorespace:ignoredups
