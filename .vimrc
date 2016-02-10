@@ -11,7 +11,7 @@
 syntax on
 
 " Editor settings "
-set encoding=utf8
+set encoding=utf8 nobomb
 set background=dark
 set ffs=unix,dos,mac
 
@@ -43,9 +43,28 @@ endif
 filetype indent on
 filetype plugin on
 
+" Update color styles "
+highlight User1 guifg=#ffdad8 guibg=#880c0e
+highlight User2 guifg=#000000 guibg=#F4905C
+highlight User3 guifg=#292b00 guibg=#f4f597
+highlight User4 guifg=#112605 guibg=#aefe7B
+highlight User5 guifg=#051d00 guibg=#7dcc7d
+highlight User7 guifg=#ffffff guibg=#880c0e gui=bold
+highlight User8 guifg=#ffffff guibg=#5b7fbb
+highlight User9 guifg=#ffffff guibg=#810085
+
 " Enable the status bar "
 set laststatus=2
-set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
+set statusline=%7*\ [%n]\                               " Buffer #
+set statusline+=%1*\ %<%F\                              " File Path
+set statusline+=%2*\ %y\                                " File Type
+set statusline+=%3*\ %{''.(&fenc!=''?&fenc:&enc).''}    " Encoding
+set statusline+=%3*\ %{(&bomb?\",BOM\":\"\")}\          " BOM
+set statusline+=%4*\ %{&ff}\                            " Format
+set statusline+=%5*\ %{&spelllang}\                     " Language
+set statusline+=%8*\ %=\ R:%l/%L\ (%03p%%)\             " Row # / Total
+set statusline+=%9*\ C:%03c\                            " Column #
+set statusline+=%0*\ \ %m%r%w\ %P\ \                    " Status
 
 " Disable sounds "
 set noerrorbells
