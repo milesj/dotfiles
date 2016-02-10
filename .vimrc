@@ -44,27 +44,54 @@ filetype indent on
 filetype plugin on
 
 " Update color styles "
-highlight User1 guifg=#ffdad8 guibg=#880c0e
-highlight User2 guifg=#000000 guibg=#F4905C
-highlight User3 guifg=#292b00 guibg=#f4f597
-highlight User4 guifg=#112605 guibg=#aefe7B
-highlight User5 guifg=#051d00 guibg=#7dcc7d
-highlight User7 guifg=#ffffff guibg=#880c0e gui=bold
-highlight User8 guifg=#ffffff guibg=#5b7fbb
-highlight User9 guifg=#ffffff guibg=#810085
+function! SetStatusColors()
+    exec 'highlight User1 guifg=#ffdad8 guibg=#880c0e'
+    exec 'highlight User2 guifg=#000000 guibg=#F4905C'
+    exec 'highlight User3 guifg=#292b00 guibg=#f4f597'
+    exec 'highlight User4 guifg=#112605 guibg=#aefe7B'
+    exec 'highlight User5 guifg=#051d00 guibg=#7dcc7d'
+    exec 'highlight User7 guifg=#ffffff guibg=#880c0e gui=bold'
+    exec 'highlight User8 guifg=#ffffff guibg=#5b7fbb'
+    exec 'highlight User9 guifg=#ffffff guibg=#810085'
+endfunc
+
+function! CurrentMode()
+    redraw
+    let l:currentMode = mode()
+
+    if currentMode == "n"
+        return "NORMAL"
+    elseif currentMode == "i"
+        return "INSERT"
+    elseif currentMode == "R"
+        return "REPLACE"
+    elseif currentMode == "v"
+        return "VISUAL"
+    elseif currentMode == "V"
+        return "V-LINE"
+    elseif currentMode == ""
+        return "V-BLOCK"
+    else
+        return l:mode
+    endif
+endfunc
 
 " Enable the status bar "
+call SetStatusColors()
+
 set laststatus=2
-set statusline=%7*\ [%n]\                               " Buffer #
-set statusline+=%1*\ %<%F\                              " File Path
-set statusline+=%2*\ %y\                                " File Type
-set statusline+=%3*\ %{''.(&fenc!=''?&fenc:&enc).''}    " Encoding
-set statusline+=%3*\ %{(&bomb?\",BOM\":\"\")}\          " BOM
-set statusline+=%4*\ %{&ff}\                            " Format
-set statusline+=%5*\ %{&spelllang}\                     " Language
-set statusline+=%8*\ %=\ R:%l/%L\ (%03p%%)\             " Row # / Total
-set statusline+=%9*\ C:%03c\                            " Column #
-set statusline+=%0*\ \ %m%r%w\ %P\ \                    " Status
+set statusline=%7*\ %{CurrentMode()}                            " Mode
+set statusline+=%7*\ [%n]\                                      " Buffer #
+set statusline+=%1*\ %<%F\                                      " File Path
+set statusline+=%2*\ %=\%y\                                     " File Type
+set statusline+=%4*\ %{&ff}\                                    " Format
+set statusline+=%3*\ %{&fenc!=''?&fenc:&enc}%{&bomb?':BOM':''}\ " Encoding : BOM
+set statusline+=%5*\ %{&spelllang}\                             " Language
+set statusline+=%8*\ %c:%l/%L\ (%p%%)\                          " Column # : Row # / Total
+set statusline+=%0*\ \ %m%r%w\ %P\ \                            " Status
+
+" Whenever the color scheme changes, re-apply the colors
+au ColorScheme * call SetStatusColors()
 
 " Disable sounds "
 set noerrorbells
