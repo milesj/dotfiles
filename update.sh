@@ -25,6 +25,7 @@ cd $dots
 git stash
 git pull --rebase origin master
 git stash apply
+git stash clear
 
 # 3) Symlink config
 echo -e "\n\033[32mSymlinking Configuration\033[0m"
