@@ -9,10 +9,10 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 syntax on
+colorscheme onedark
 
 " Editor settings "
 set encoding=utf8 nobomb
-set background=dark
 set ffs=unix,dos,mac
 
 " Act like vim, not vi "
@@ -43,18 +43,6 @@ endif
 filetype indent on
 filetype plugin on
 
-" Update color styles "
-function! SetStatusColors()
-    exec 'highlight User1 guifg=#ffdad8 guibg=#880c0e'
-    exec 'highlight User2 guifg=#000000 guibg=#F4905C'
-    exec 'highlight User3 guifg=#292b00 guibg=#f4f597'
-    exec 'highlight User4 guifg=#112605 guibg=#aefe7B'
-    exec 'highlight User5 guifg=#051d00 guibg=#7dcc7d'
-    exec 'highlight User7 guifg=#ffffff guibg=#880c0e gui=bold'
-    exec 'highlight User8 guifg=#ffffff guibg=#5b7fbb'
-    exec 'highlight User9 guifg=#ffffff guibg=#810085'
-endfunc
-
 function! CurrentMode()
     redraw
     let l:currentMode = mode()
@@ -76,9 +64,6 @@ function! CurrentMode()
     endif
 endfunc
 
-" Enable the status bar "
-call SetStatusColors()
-
 set laststatus=2
 set statusline=%7*\ %{CurrentMode()}                            " Mode
 set statusline+=%7*\ [%n]\                                      " Buffer #
@@ -89,9 +74,6 @@ set statusline+=%3*\ %{&fenc!=''?&fenc:&enc}%{&bomb?':BOM':''}\ " Encoding : BOM
 set statusline+=%5*\ %{&spelllang}\                             " Language
 set statusline+=%8*\ %c:%l/%L\ (%p%%)\                          " Column # : Row # / Total
 set statusline+=%0*\ \ %m%r%w\ %P\ \                            " Status
-
-" Whenever the color scheme changes, re-apply the colors
-au ColorScheme * call SetStatusColors()
 
 " Disable sounds "
 set noerrorbells
@@ -122,6 +104,7 @@ set wrap
 " Allow backspacing over autoindent, line breaks and start of insert action "
 set backspace=eol,start,indent
 set nostartofline
+set linespace=2
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Search                                                                      "

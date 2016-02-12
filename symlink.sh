@@ -27,7 +27,12 @@ done
 
 # Symlink certain files manually
 echo "···· Linking Atom config"
+mkdir -p "$HOME/.atom"
 symlink "$dots/atom/config.cson" "$HOME/.atom/config.cson"
+
+echo ".... Linking VIM color scheme"
+mkdir -p "$HOME/.vim/colors"
+symlink "$dots/vim/colors/onedark.vim" "$HOME/.vim/colors/onedark.vim"
 
 # Source the profile
 echo "···· Setting up Bash"
