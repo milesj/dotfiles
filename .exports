@@ -12,3 +12,6 @@ export HISTCONTROL=ignorespace:ignoredups
 export PS1="\e[95m[\t]\e[0m \e[96m\u\e[0m:\e[92m\W\e[0m \e[1;93m>\e[0m "
 export CLICOLOR=1
 export LSCOLORS=gxfxexcxbxdxdxabaBagaG
+
+# Languages
+export NODE_ENV=development
