@@ -91,6 +91,12 @@ defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
 chflags nohidden ~/Library
 
 ###############################################################################
+# Animations                                                                  #
+###############################################################################
+
+# http://apple.stackexchange.com/questions/14001/how-to-turn-off-all-animations-on-os-x/63477#63477
+
+###############################################################################
 # Kill And Restart                                                            #
 ###############################################################################
 
