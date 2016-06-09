@@ -18,6 +18,7 @@ echo "···· Cleaning up"
 brew cleanup
 brew cask cleanup
 brew doctor
+brew prune
 
 # 2) Update git
 echo -e "\n\033[32mUpdating Repository\033[0m"
