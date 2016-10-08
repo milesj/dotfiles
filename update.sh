@@ -11,7 +11,7 @@ echo -e "\033[32mUpdating Homebrew\033[0m"
 # Update
 echo "···· Upgrading"
 brew update
-brew upgrade --all
+brew upgrade
 
 # Clean old packages
 echo "···· Cleaning up"
