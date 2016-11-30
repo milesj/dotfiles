@@ -46,6 +46,8 @@
     keepBackup = false
 [diff]
     renames = copies
+    indentHeuristic = true
+    compactionHeuristic = true
 [difftool]
     prompt = false
 [fetch]

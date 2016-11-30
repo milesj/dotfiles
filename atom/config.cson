@@ -3,7 +3,11 @@
   autosave:
     enabled: true
   core:
+    disabledPackages: [
+      "racer"
+    ]
     projectHome: "~/Sites/"
+    telemetryConsent: "no"
   editor:
     backUpBeforeSaving: true
     invisibles:
@@ -14,7 +18,7 @@
     showIndentGuide: true
     showInvisibles: true
     softWrapAtPreferredLineLength: true
-    tabLength: 4
+    tabLength: 2
   "exception-reporting":
     userId: "2bf789d1-69e6-8abe-aec6-633f0f274810"
   "find-and-replace":
