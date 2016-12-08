@@ -25,3 +25,6 @@ fi;
 if exists rbenv; then
     eval "$(rbenv init -)";
 fi;
+
+export NVM_DIR="/Users/miles_johnson/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
