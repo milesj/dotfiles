@@ -20,7 +20,11 @@ brew cask cleanup
 brew doctor
 brew prune
 
-# 2) Update git
+# 2) Atom
+echo -e "\033[32mUpdating Atom\033[0m"
+apm update
+
+# 3) Update git
 echo -e "\n\033[32mUpdating Repository\033[0m"
 cd $dots
 git stash
@@ -28,9 +32,9 @@ git pull --rebase origin master
 git stash apply
 git stash clear
 
-# 3) Symlink config
+# 4) Symlink config
 echo -e "\n\033[32mSymlinking Configuration\033[0m"
 bash "$dots/symlink.sh"
 
-# 4) Done
+# 5) Done
 echo -e "\n\033[32mComplete!\033[0m"

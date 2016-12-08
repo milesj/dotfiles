@@ -1,13 +1,32 @@
 "*":
+  "atom-beautify":
+    css:
+      end_with_newline: true
   "autocomplete-plus": {}
   autosave:
     enabled: true
+  caniuse:
+    useAccessibleColors: true
   core:
+    customFileTypes:
+      "source.ini": [
+        ".buckconfig"
+        ".hgrc"
+      ]
+      "source.json": [
+        ".arcconfig"
+        "BUCK.autodeps"
+      ]
+      "source.python": [
+        "BUCK"
+      ]
     disabledPackages: [
-      "racer"
+      "tree-view"
     ]
     projectHome: "~/Sites/"
-    telemetryConsent: "no"
+    telemetryConsent: "limited"
+  docblockr:
+    return_tag: "@returns"
   editor:
     backUpBeforeSaving: true
     invisibles:
@@ -17,19 +36,79 @@
     scrollPastEnd: true
     showIndentGuide: true
     showInvisibles: true
-    softWrapAtPreferredLineLength: true
-    tabLength: 2
   "exception-reporting":
     userId: "2bf789d1-69e6-8abe-aec6-633f0f274810"
+  "file-icons": {}
   "find-and-replace":
     focusEditorAfterSearch: true
     openProjectFindResultsInRightPane: true
+  fonts: {}
   "git-diff":
     showIconsInEditorGutter: true
+  "highlight-selected":
+    highlightBackground: true
+  "js-hyperclick":
+    extensions: [
+      ".js"
+      ".json"
+      ".node"
+      ".jsx"
+    ]
+  "linter-eslint":
+    globalNodePath: "/usr/local"
+  "linter-sass-lint":
+    globalNodePath: "/usr/local"
+    noConfigDisable: true
+    resolvePathsRelativeToConfig: true
+  nuclide:
+    "nuclide-buck":
+      compileErrorDiagnostics: false
+    "nuclide-diff-view":
+      shouldDockPublishView: false
+    "nuclide-file-tree":
+      showOpenFiles: false
+    "nuclide-flow":
+      enableStructuredTypeHints: true
+    "nuclide-health":
+      toolbarJewel: "CPU"
+    "nuclide-hg-repository":
+      enableDiffStats: true
+    "nuclide-home":
+      showHome: false
+    "nuclide-react-native": {}
+    use:
+      "nuclide-adb-logcat": false
+      "nuclide-arcanist": false
+      "nuclide-buck": false
+      "nuclide-clang": false
+      "nuclide-context-view": false
+      "nuclide-ctags": false
+      "nuclide-debugger": false
+      "nuclide-debugger-iwdp": false
+      "nuclide-debugger-native": false
+      "nuclide-deep-link": false
+      "nuclide-hg-repository": false
+      "nuclide-hhvm": false
+      "nuclide-home": false
+      "nuclide-http-request-sender": false
+      "nuclide-ios-simulator-logs": false
+      "nuclide-language-reason": false
+      "nuclide-loaded-shell-hook": false
+      "nuclide-objc": false
+      "nuclide-ocaml": false
+      "nuclide-python": false
+      "nuclide-remote-atom": false
+      "nuclide-remote-projects": false
+      "nuclide-swift": false
+      "nuclide-task-runner": false
+      "nuclide-test-runner": false
   "one-dark-ui": {}
   "status-bar": {}
   tabs:
     enableVcsColoring: true
+  "tool-bar":
+    iconSize: "16px"
+    position: "Left"
   "tree-view":
     hideIgnoredNames: true
   welcome:
