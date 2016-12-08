@@ -12,6 +12,7 @@
       "source.ini": [
         ".buckconfig"
         ".hgrc"
+        ".flowconfig"
       ]
       "source.json": [
         ".arcconfig"
@@ -22,6 +23,7 @@
       ]
     disabledPackages: [
       "tree-view"
+      "linter"
     ]
     projectHome: "~/Sites/"
     telemetryConsent: "limited"
@@ -33,9 +35,13 @@
       cr: "↩"
       eol: "↵"
       tab: "⟶"
+    preferredLineLength: 100
     scrollPastEnd: true
     showIndentGuide: true
     showInvisibles: true
+    softWrap: true
+    softWrapAtPreferredLineLength: true
+    softWrapHangingIndent: 2
   "exception-reporting":
     userId: "2bf789d1-69e6-8abe-aec6-633f0f274810"
   "file-icons": {}
@@ -63,6 +69,7 @@
   nuclide:
     "nuclide-buck":
       compileErrorDiagnostics: false
+    "nuclide-diagnostics-ui": {}
     "nuclide-diff-view":
       shouldDockPublishView: false
     "nuclide-file-tree":
@@ -113,3 +120,6 @@
     hideIgnoredNames: true
   welcome:
     showOnStartup: false
+".ansi.text":
+  editor:
+    softWrapAtPreferredLineLength: true
