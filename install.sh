@@ -65,8 +65,13 @@ bash "$dots/symlink.sh"
 # 3) Setup git
 echo -e "\n\033[32mSetting Up Git\033[0m"
 
+# Name
+echo -n "···· Name [enter]: "
+read name
+git config --global user.name "$name"
+
 # Email
-echo -n "···· Enter email and press [enter]: "
+echo -n "···· Email [enter]: "
 read email
 git config --global user.email "$email"
 
