@@ -5,7 +5,7 @@
     excludesFile = ~/.gitignore_global
     whitespace = space-before-tab,trailing-space
     filemode = false
-    precomposeUnicode = true
+    precomposeunicode = true
     # Make `git rebase` safer on OSX: <http://www.git-tower.com/blog/make-git-rebase-safe-on-osx/>
     trustctime = false
     # Use inline word diffs: <https://www.viget.com/articles/dress-up-your-git-diffs-with-word-level-highlights>
@@ -57,3 +57,5 @@
     submoduleSummary = true
 [apply]
     whitespace = fix
+[remote "origin"]
+    prune = true
