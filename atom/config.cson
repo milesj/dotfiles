@@ -2,6 +2,8 @@
   "atom-beautify":
     css:
       end_with_newline: true
+    general:
+      _analyticsUserId: "ae6ec7f1-ce96-45db-bf73-10e2bcf0d7e6"
   "autocomplete-plus": {}
   autosave:
     enabled: true
@@ -82,6 +84,7 @@
       showOpenFiles: false
     "nuclide-flow":
       enableStructuredTypeHints: true
+      warnOnNotInstalled: false
     "nuclide-hack": {}
     "nuclide-health":
       toolbarJewel: "CPU"
@@ -108,7 +111,6 @@
       "nuclide-http-request-sender": false
       "nuclide-ios-simulator-logs": false
       "nuclide-language-reason": false
-      "nuclide-loaded-shell-hook": false
       "nuclide-objc": false
       "nuclide-ocaml": false
       "nuclide-python": false
