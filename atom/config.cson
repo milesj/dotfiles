@@ -10,6 +10,7 @@
   caniuse:
     useAccessibleColors: true
   core:
+    closeDeletedFileTabs: true
     customFileTypes:
       "source.ini": [
         ".buckconfig"
@@ -25,8 +26,11 @@
       ]
     disabledPackages: [
       "tree-view"
-      "linter"
+      "MagicPython"
       "docblockr"
+      "haskell-grammar"
+      "autocomplete-ruby"
+      "linter-ui-default"
     ]
     projectHome: "~/Sites/"
     telemetryConsent: "limited"
@@ -69,7 +73,9 @@
     globalNodePath: "/usr/local"
     noConfigDisable: true
     resolvePathsRelativeToConfig: true
+  "linter-ui-default": {}
   nuclide:
+    installRecommendedPackages: true
     "nuclide-buck":
       compileErrorDiagnostics: false
     "nuclide-console": {}
@@ -83,6 +89,7 @@
     "nuclide-file-tree":
       showOpenFiles: false
     "nuclide-flow":
+      canUseFlowBin: true
       enableStructuredTypeHints: true
       warnOnNotInstalled: false
     "nuclide-hack": {}
@@ -96,20 +103,28 @@
     "nuclide-related-files": {}
     use:
       "nuclide-adb-logcat": false
+      "nuclide-adb-sdb": false
       "nuclide-arcanist": false
+      "nuclide-blame-provider-hg": false
       "nuclide-buck": false
+      "nuclide-buck-ios": false
       "nuclide-clang": false
       "nuclide-context-view": false
       "nuclide-ctags": false
       "nuclide-debugger": false
       "nuclide-debugger-iwdp": false
       "nuclide-debugger-native": false
+      "nuclide-debugger-node": false
+      "nuclide-debugger-php": false
       "nuclide-deep-link": false
+      "nuclide-hack": false
+      "nuclide-hg-conflict-resolver": false
       "nuclide-hg-repository": false
       "nuclide-hhvm": false
       "nuclide-home": false
       "nuclide-http-request-sender": false
       "nuclide-ios-simulator-logs": false
+      "nuclide-language-hack": false
       "nuclide-language-reason": false
       "nuclide-objc": false
       "nuclide-ocaml": false
@@ -117,8 +132,6 @@
       "nuclide-remote-atom": false
       "nuclide-remote-projects": false
       "nuclide-swift": false
-      "nuclide-task-runner": false
-      "nuclide-test-runner": false
   "one-dark-ui": {}
   "status-bar": {}
   tabs:
