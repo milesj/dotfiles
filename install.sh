@@ -35,7 +35,8 @@ brew install curl
 brew install openssl
 brew install node yarn
 brew install rbenv ruby-build
-brew install php70 php70-opcache php70-libsodium composer
+brew install php71 php71-opcache php71-libsodium composer
+brew install rust
 
 echo "···· Verifying install"
 brew doctor
