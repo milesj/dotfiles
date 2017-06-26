@@ -21,10 +21,11 @@ if exists scmpuff; then
     eval "$(scmpuff init -s --aliases=false)";
 fi;
 
-# Initailize rbenv if defined.
+# Initialize rbenv if defined.
 if exists rbenv; then
     eval "$(rbenv init -)";
 fi;
 
+# Initialize nvm.
 export NVM_DIR="/Users/miles_johnson/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm

@@ -16,7 +16,7 @@ bash ~/.dotfiles/install.sh
 
 Will install the following:
 - Tools: Homebrew, Git, Vim
-- Languages: Node.js, Ruby, PHP
+- Languages: Node.js, Ruby, PHP, Rust
 - Applications: Chrome, Firefox, Atom, Spotify, Slack, and many more
 - Atom Packages
 

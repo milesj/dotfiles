@@ -26,9 +26,10 @@ for from in $(find $dots -name ".*" -type f -maxdepth 1); do
 done
 
 # Symlink certain files manually
-echo "···· Linking Atom config"
+echo "···· Linking Atom settings"
 mkdir -p "$HOME/.atom"
 symlink "$dots/atom/config.cson" "$HOME/.atom/config.cson"
+symlink "$dots/atom/snippets.cson" "$HOME/.atom/snippets.cson"
 
 echo ".... Linking VIM color scheme"
 mkdir -p "$HOME/.vim/colors"

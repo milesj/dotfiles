@@ -3,14 +3,13 @@
     css:
       end_with_newline: true
     general:
-      _analyticsUserId: "8df630c0-5110-4343-9034-6c1607aaa2ae"
+      _analyticsUserId: "ae6ec7f1-ce96-45db-bf73-10e2bcf0d7e6"
   "autocomplete-plus": {}
   autosave:
     enabled: true
   caniuse:
     useAccessibleColors: true
   core:
-    allowPendingPaneItems: false
     closeDeletedFileTabs: true
     customFileTypes:
       "source.ini": [
@@ -93,6 +92,7 @@
     "nuclide-flow":
       canUseFlowBin: true
       enableStructuredTypeHints: true
+      warnOnNotInstalled: false
     "nuclide-hack": {}
     "nuclide-health":
       toolbarJewel: "CPU"

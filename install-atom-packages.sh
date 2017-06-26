@@ -15,7 +15,6 @@ apm install js-hyperclick
 apm install language-babel
 apm install language-graphql
 apm install language-ini
-apm install language-php
 apm install language-rust
 apm install linter-eslint
 apm install linter-php
