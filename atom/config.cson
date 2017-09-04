@@ -25,12 +25,13 @@
         "BUCK"
       ]
     disabledPackages: [
-      "tree-view"
       "MagicPython"
       "docblockr"
       "haskell-grammar"
       "autocomplete-ruby"
       "linter-ui-default"
+      "tree-view"
+      "github"
     ]
     openEmptyEditorOnStart: false
     projectHome: "~/Sites/"
