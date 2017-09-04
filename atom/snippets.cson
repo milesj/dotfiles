@@ -515,8 +515,23 @@
       }
     }
     """
+  "React pure component":
+    prefix: "compp"
+    body: """
+    export default class ${1:ComponentName} extends React.PureComponent {
+      static propTypes = {};
+
+      static defaultProps = {};
+
+      render() {
+        return (
+          ${2}
+        );
+      }
+    }
+    """
   "React component with context":
-    prefix: "comp"
+    prefix: "compx"
     body: """
     export default class ${1:ComponentName} extends React.Component {
       static contextTypes = {};
@@ -544,6 +559,21 @@
         ${2}
       );
     }
+
+    ${1:ComponentName}.propTypes = {};
+
+    ${1:ComponentName}.defaultProps = {};
+    """
+  "React stateless function component with context":
+    prefix: "sfcx"
+    body: """
+    export default function ${1:ComponentName}(props, context) {
+      return (
+        ${2}
+      );
+    }
+
+    ${1:ComponentName}.contextTypes = {};
 
     ${1:ComponentName}.propTypes = {};
 
