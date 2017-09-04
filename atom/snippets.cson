@@ -306,10 +306,10 @@
     body: "module.exports = ${1:value};"
   "export module":
     prefix: "ex"
-    body: "export ${1:member};"
+    body: "export ${1:member}"
   "export default module":
     prefix: "exd"
-    body: "export default ${1:member};"
+    body: "export default ${1:member}"
   "import module":
     prefix: "im"
     body: "import ${2:name} from '${1:pkg}';"
@@ -407,6 +407,20 @@
   "Array.isArray()":
     prefix: "Ais"
     body: "Array.isArray(${1})"
+  "Object.keys()":
+    prefix: "Ok"
+    body: """
+    Object.keys(${1:data}).forEach((key) => {
+      ${0}
+    });
+    """
+  "Object.values()":
+    prefix: "Ov"
+    body: """
+    Object.values(${1:data}).forEach((value) => {
+      ${0}
+    });
+    """
 # Tests
   "async it":
     prefix: "ita"
@@ -469,13 +483,69 @@
 # Flowtype
   "import type module":
     prefix: "imt"
-    body: "import type ${2:name} from '${1}';"
+    body: "import type ${2:name} from '${1:./types}';"
   "import typeof module":
     prefix: "imto"
     body: "import typeof ${2:name} from '${1}';"
   "import type module named":
     prefix: "imtn"
-    body: "import type { $2 } from '${1}';"
+    body: "import type { $2 } from '${1:./types}';"
   "export type":
     prefix: "ext"
     body: "export type ${1} = ${2};"
+# React
+  "import React":
+    prefix: "react"
+    body: """
+    import React from 'react';
+    import PropTypes from 'prop-types';
+    """
+  "React component":
+    prefix: "comp"
+    body: """
+    export default class ${1:ComponentName} extends React.Component {
+      static propTypes = {};
+
+      static defaultProps = {};
+
+      render() {
+        return (
+          ${2}
+        );
+      }
+    }
+    """
+  "React component with context":
+    prefix: "comp"
+    body: """
+    export default class ${1:ComponentName} extends React.Component {
+      static contextTypes = {};
+
+      static propTypes = {};
+
+      static defaultProps = {};
+
+      getChildContext() {
+        return {};
+      }
+
+      render() {
+        return (
+          ${2}
+        );
+      }
+    }
+    """
+  "React stateless function component":
+    prefix: "sfc"
+    body: """
+    export default function ${1:ComponentName}(props) {
+      return (
+        ${2}
+      );
+    }
+
+    ${1:ComponentName}.propTypes = {};
+
+    ${1:ComponentName}.defaultProps = {};
+    """
