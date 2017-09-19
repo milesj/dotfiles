@@ -458,7 +458,7 @@
     });
     """
   "after each":
-    prefix: "be"
+    prefix: "ae"
     body: """
     afterEach(() => {
       ${0}
@@ -478,7 +478,7 @@
     body: """
     expect(() => {
       ${1}
-    }).toThrowError('${2:error}');"
+    }).toThrowError('${2:error}');
     """
 # Flowtype
   "import type module":
@@ -535,6 +535,23 @@
     body: """
     export default class ${1:ComponentName} extends React.Component {
       static contextTypes = {};
+
+      static propTypes = {};
+
+      static defaultProps = {};
+
+      render() {
+        return (
+          ${2}
+        );
+      }
+    }
+    """
+  "React component defining context":
+    prefix: "compxx"
+    body: """
+    export default class ${1:ComponentName} extends React.Component {
+      static childContextTypes = {};
 
       static propTypes = {};
 

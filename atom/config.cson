@@ -30,8 +30,8 @@
       "haskell-grammar"
       "autocomplete-ruby"
       "linter-ui-default"
-      "tree-view"
       "github"
+      "tree-view"
     ]
     openEmptyEditorOnStart: false
     projectHome: "~/Sites/"
