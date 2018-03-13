@@ -7,7 +7,7 @@ how to install them!
 
 This will clone the repository to the home directory and run the installation script.
 The script will install Homebrew and its packages, symlink configuration dotfiles,
-setup Git, OSX, Atom, and more.
+setup Git, OSX, Atom, VSCode, and more.
 
 ```
 git clone git@github.com:milesj/dotfiles.git ~/.dotfiles
@@ -18,11 +18,11 @@ Will install the following:
 - Tools: Homebrew, Git, Vim
 - Languages: Node.js, Ruby, PHP, Rust
 - Applications: Chrome, Firefox, Spotify, Slack, and many more
-- Atom Packages
+- Atom + VSCode Packages (apps must be installed first)
 
 ### Update ###
 
-This will update Homebrew, Atom, VSCode, and its packages, fetch the latest Git repository
+This will update Homebrew, Atom, VSCode, and any packages, fetch the latest Git repository
 (will stash changes to avoid conflicts), and re-symlink.
 
 ```
