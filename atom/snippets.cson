@@ -407,6 +407,9 @@
   "Array.isArray()":
     prefix: "Ais"
     body: "Array.isArray(${1})"
+  "Array.from()":
+    prefix: "Af"
+    body: "Array.from(${1})"
   "Object.keys()":
     prefix: "Ok"
     body: """
@@ -421,14 +424,14 @@
       ${0}
     });
     """
-# Tests
-  "async it":
-    prefix: "ita"
+  "Object.entries()":
+    prefix: "Oe"
     body: """
-    it('${1}', async () => {
+    Object.entries(${1:data}).forEach(([key, value]) => {
       ${0}
     });
     """
+# Tests
   "synchronous it":
     prefix: "it"
     body: """
@@ -436,10 +439,24 @@
       ${0}
     });
     """
+  "async it":
+    prefix: "ita"
+    body: """
+    it('${1}', async () => {
+      ${0}
+    });
+    """
   "describe":
     prefix: "de"
     body: """
     describe('${1}', () => {
+      ${0}
+    });
+    """
+  "describe component":
+    prefix: "dec"
+    body: """
+    describe('<${1} />', () => {
       ${0}
     });
     """
@@ -480,6 +497,18 @@
       ${1}
     }).toThrowError('${2:error}');
     """
+  "expect toMatchSnapshot":
+    prefix: "xts"
+    body: "expect(${1:wrapper}).toMatchSnapshot();"
+  "expect toHaveBeenCalled":
+    prefix: "xc"
+    body: "expect(${1:spy}).toHaveBeenCalled();"
+  "expect toHaveBeenCalledWith":
+    prefix: "xcw"
+    body: "expect(${0:spy}).toHaveBeenCalled(${1});"
+  "expect toHaveLength":
+    prefix: "xl"
+    body: "expect(${0:wrapper}).toHaveLength(${1:0});"
 # Flowtype
   "import type module":
     prefix: "imt"
@@ -494,11 +523,17 @@
     prefix: "ext"
     body: "export type ${1} = ${2};"
 # React
-  "import React":
+  "import React + PropTypes":
     prefix: "react"
     body: """
     import React from 'react';
     import PropTypes from 'prop-types';
+    """
+  "import React + Enzyme":
+    prefix: "enzyme"
+    body: """
+    import React from 'react';
+    import { shallow } from 'enzyme';
     """
   "React component":
     prefix: "comp"
@@ -509,9 +544,7 @@
       static defaultProps = {};
 
       render() {
-        return (
-          ${2}
-        );
+        return ${2:null};
       }
     }
     """
@@ -524,9 +557,7 @@
       static defaultProps = {};
 
       render() {
-        return (
-          ${2}
-        );
+        return ${2:null};
       }
     }
     """
@@ -541,9 +572,7 @@
       static defaultProps = {};
 
       render() {
-        return (
-          ${2}
-        );
+        return ${2:null};
       }
     }
     """
@@ -562,9 +591,7 @@
       }
 
       render() {
-        return (
-          ${2}
-        );
+        return ${2:null};
       }
     }
     """
@@ -572,9 +599,7 @@
     prefix: "sfc"
     body: """
     export default function ${1:ComponentName}(props) {
-      return (
-        ${2}
-      );
+      return ${2:null};
     }
 
     ${1:ComponentName}.propTypes = {};
@@ -585,9 +610,7 @@
     prefix: "sfcx"
     body: """
     export default function ${1:ComponentName}(props, context) {
-      return (
-        ${2}
-      );
+      return ${2:null};
     }
 
     ${1:ComponentName}.contextTypes = {};

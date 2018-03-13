@@ -30,7 +30,7 @@
       "haskell-grammar"
       "autocomplete-ruby"
       "linter-ui-default"
-      "github"
+      "linter"
       "tree-view"
     ]
     openEmptyEditorOnStart: false
@@ -68,6 +68,8 @@
       ".json"
       ".node"
       ".jsx"
+      ".ts"
+      ".tsx"
     ]
   "linter-eslint":
     globalNodePath: "/usr/local"
@@ -77,6 +79,8 @@
     resolvePathsRelativeToConfig: true
   "linter-ui-default": {}
   nuclide:
+    "atom-ide-outline-view":
+      searchEnabled: false
     installRecommendedPackages: true
     "nuclide-buck":
       compileErrorDiagnostics: false
@@ -89,6 +93,7 @@
     "nuclide-diff-view":
       shouldDockPublishView: false
     "nuclide-file-tree":
+      revealFileOnSwitch: false
       showOpenFiles: false
     "nuclide-flow":
       canUseFlowBin: true
@@ -104,37 +109,119 @@
     "nuclide-react-native": {}
     "nuclide-related-files": {}
     use:
-      "nuclide-adb-logcat": false
-      "nuclide-adb-sdb": false
+      "atom-ide-busy-signal": "default"
+      "atom-ide-code-actions": "default"
+      "atom-ide-code-format": "default"
+      "atom-ide-code-highlight": "default"
+      "atom-ide-console": "default"
+      "atom-ide-datatip": "default"
+      "atom-ide-definitions": "default"
+      "atom-ide-diagnostics": "default"
+      "atom-ide-diagnostics-ui": "default"
+      "atom-ide-find-references": "default"
+      "atom-ide-global": "default"
+      "atom-ide-outline-view": "default"
+      "atom-ide-signature-help": "default"
+      hyperclick: "default"
+      "nuclide-adb-logcat": "never"
+      "nuclide-adb-sdb": "never"
       "nuclide-arcanist": false
-      "nuclide-blame-provider-hg": false
-      "nuclide-buck": false
-      "nuclide-buck-ios": false
-      "nuclide-clang": false
-      "nuclide-context-view": false
-      "nuclide-ctags": false
-      "nuclide-debugger": false
+      "nuclide-atom-notifications": "default"
+      "nuclide-autocomplete": "default"
+      "nuclide-blame": "default"
+      "nuclide-blame-provider-hg": "never"
+      "nuclide-bookshelf": "default"
+      "nuclide-buck": "never"
+      "nuclide-buck-ios": "never"
+      "nuclide-clang": "never"
+      "nuclide-clipboard-path": "default"
+      "nuclide-code-search": "default"
+      "nuclide-context-view": "never"
+      "nuclide-cquery-lsp": "default"
+      "nuclide-ctags": "never"
+      "nuclide-current-working-directory": "default"
+      "nuclide-debugger": "never"
       "nuclide-debugger-iwdp": false
-      "nuclide-debugger-native": false
+      "nuclide-debugger-native": "never"
+      "nuclide-debugger-new": "default"
       "nuclide-debugger-node": false
-      "nuclide-debugger-php": false
-      "nuclide-deep-link": false
-      "nuclide-hack": false
+      "nuclide-debugger-php": "never"
+      "nuclide-debugger-vsp": "default"
+      "nuclide-deep-link": "never"
+      "nuclide-definition-preview": "default"
+      "nuclide-definition-preview-provider": "default"
+      "nuclide-deprecation-cop": "default"
+      "nuclide-device-panel": "default"
+      "nuclide-device-panel-ios": "default"
+      "nuclide-diagnostics-extras": "default"
+      "nuclide-distraction-free-mode": "default"
+      "nuclide-file-family": "default"
+      "nuclide-file-family-projectionist": "default"
+      "nuclide-file-tree": "default"
+      "nuclide-file-watcher": "default"
+      "nuclide-flow": "default"
+      "nuclide-fuzzy-filename-provider": "default"
+      "nuclide-graphql": "default"
+      "nuclide-hack": "never"
+      "nuclide-health": "default"
       "nuclide-hg-conflict-resolver": false
-      "nuclide-hg-repository": false
-      "nuclide-hhvm": false
-      "nuclide-home": false
-      "nuclide-http-request-sender": false
-      "nuclide-ios-simulator-logs": false
-      "nuclide-language-hack": false
-      "nuclide-language-reason": false
-      "nuclide-objc": false
-      "nuclide-ocaml": false
-      "nuclide-python": false
-      "nuclide-remote-atom": false
-      "nuclide-remote-projects": false
-      "nuclide-swift": false
+      "nuclide-hg-repository": "never"
+      "nuclide-hhvm": "never"
+      "nuclide-home": "never"
+      "nuclide-http-request-sender": "never"
+      "nuclide-infer-al": "default"
+      "nuclide-ios-simulator-logs": "never"
+      "nuclide-js-imports-client": "default"
+      "nuclide-json": "default"
+      "nuclide-key-binding-hint-status": "default"
+      "nuclide-language-hack": "never"
+      "nuclide-language-infer-al": "default"
+      "nuclide-language-reason": "never"
+      "nuclide-metro": "default"
+      "nuclide-move-item-to-available-pane": "default"
+      "nuclide-navigation-stack": "default"
+      "nuclide-navigation-stack-status-bar": "default"
+      "nuclide-notifications": "default"
+      "nuclide-nux": "default"
+      "nuclide-objc": "never"
+      "nuclide-ocaml": "never"
+      "nuclide-open-filenames-provider": "default"
+      "nuclide-outline-view-extras": "default"
+      "nuclide-project": "default"
+      "nuclide-python": "never"
+      "nuclide-quick-open": "default"
+      "nuclide-react-inspector": "default"
+      "nuclide-recent-files-provider": "default"
+      "nuclide-recent-files-service": "default"
+      "nuclide-refactorizer": "default"
+      "nuclide-related-files": "default"
+      "nuclide-remote-atom": "never"
+      "nuclide-remote-projects": "never"
+      "nuclide-settings": "default"
+      "nuclide-ssh-tunnel": "default"
+      "nuclide-swift": "never"
+      "nuclide-syntactic-selection": "default"
+      "nuclide-task-runner": "default"
+      "nuclide-terminal": "default"
+      "nuclide-test-runner": "default"
+      "nuclide-type-coverage": "default"
+      "nuclide-type-hint": "default"
+      "nuclide-ui": "default"
+      "nuclide-unicode-datatip": "default"
+      "nuclide-url-hyperclick": "default"
+      "nuclide-vcs-log": "default"
+      "nuclide-working-sets": "default"
   "one-dark-ui": {}
+  "prettier-atom":
+    formatOnSaveOptions:
+      enabled: true
+      isDisabledIfNotInPackageJson: true
+    prettierOptions:
+      printWidth: 100
+      singleQuote: true
+      tabWidth: 2
+      trailingComma: "all"
+    useEslint: true
   "status-bar": {}
   tabs:
     enableVcsColoring: true
