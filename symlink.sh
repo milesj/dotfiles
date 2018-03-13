@@ -31,6 +31,10 @@ mkdir -p "$HOME/.atom"
 symlink "$dots/atom/config.cson" "$HOME/.atom/config.cson"
 symlink "$dots/atom/snippets.cson" "$HOME/.atom/snippets.cson"
 
+echo "···· Linking VSCode settings"
+symlink "$dots/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
+symlink "$dots/vscode/snippets.json" "$HOME/Library/Application Support/Code/User/snippets/javascript.json"
+
 echo ".... Linking VIM color scheme"
 mkdir -p "$HOME/.vim/colors"
 symlink "$dots/vim/colors/onedark.vim" "$HOME/.vim/colors/onedark.vim"

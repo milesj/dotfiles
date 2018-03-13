@@ -17,12 +17,12 @@ bash ~/.dotfiles/install.sh
 Will install the following:
 - Tools: Homebrew, Git, Vim
 - Languages: Node.js, Ruby, PHP, Rust
-- Applications: Chrome, Firefox, Atom, Spotify, Slack, and many more
+- Applications: Chrome, Firefox, Spotify, Slack, and many more
 - Atom Packages
 
 ### Update ###
 
-This will update Homebrew, Atom, and its packages, fetch the latest Git repository
+This will update Homebrew, Atom, VSCode, and its packages, fetch the latest Git repository
 (will stash changes to avoid conflicts), and re-symlink.
 
 ```

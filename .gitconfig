@@ -13,7 +13,7 @@
     pager = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less
     sparseCheckout = true
 [push]
-  default = current
+    default = current
     followTags = true
 [pull]
     ff = false
