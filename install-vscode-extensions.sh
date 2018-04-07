@@ -12,5 +12,6 @@ code --install-extension PKief.material-icon-theme
 code --install-extension esbenp.prettier-vscode
 code --install-extension robinbentley.sass-indented
 code --install-extension agauniyal.vscode-caniuse
+code --install-extension ms-vscode.atom-keybindings
 
 echo -e "\n\033[32mComplete!\033[0m"

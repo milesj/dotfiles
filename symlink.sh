@@ -33,7 +33,7 @@ symlink "$dots/atom/snippets.cson" "$HOME/.atom/snippets.cson"
 
 echo "···· Linking VSCode settings"
 symlink "$dots/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
-symlink "$dots/vscode/snippets.json" "$HOME/Library/Application Support/Code/User/snippets/javascript.json"
+symlink "$dots/vscode/snippets.json" "$HOME/Library/Application Support/Code/User/snippets/javascript.code-snippets"
 
 echo ".... Linking VIM color scheme"
 mkdir -p "$HOME/.vim/colors"
