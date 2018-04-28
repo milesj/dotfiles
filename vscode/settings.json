@@ -37,4 +37,10 @@
     "javascriptreact",
     "typescriptreact"
   ],
+  "jsDocCompletion.enabled": false,
+  "todohighlight.keywords": [
+    "TODO",
+    "TEMP",
+    "FIXME"
+  ]
 }

@@ -9,19 +9,39 @@
   },
   "promise constructor": {
     "prefix": "newP",
-    "body": ["new Promise((resolve, reject) => {", "  ${0}", "});"]
+    "body": [
+      "new Promise((resolve, reject) => {",
+      "  ${0}",
+      "});"
+    ]
   },
   "promise then": {
     "prefix": "thn",
-    "body": [".then((value) => {", "  ${0}", "", "  return value;", "});"]
+    "body": [
+      ".then((value) => {",
+      "  ${0}",
+      "",
+      "  return value;",
+      "});"
+    ]
   },
   "promise inline then": {
     "prefix": "thni",
-    "body": [".then(value => (", "  ${0}", "));"]
+    "body": [
+      ".then(value => (",
+      "  ${0}",
+      "));"
+    ]
   },
   "promise catch": {
     "prefix": "cat",
-    "body": [".catch((error) => {", "  ${0}", "", "  throw error;", "});"]
+    "body": [
+      ".catch((error) => {",
+      "  ${0}",
+      "",
+      "  throw error;",
+      "});"
+    ]
   },
   "promise catch swallow": {
     "prefix": "cats",
@@ -37,7 +57,13 @@
   },
   "class": {
     "prefix": "cs",
-    "body": ["class ${1:ClassName} {", "  constructor(${2:args}) {", "    ${3}", "  }", "}"]
+    "body": [
+      "class ${1:ClassName} {",
+      "  constructor(${2:args}) {",
+      "    ${3}",
+      "  }",
+      "}"
+    ]
   },
   "class extends": {
     "prefix": "csx",
@@ -52,11 +78,19 @@
   },
   "class method": {
     "prefix": "csm",
-    "body": ["${1:name}(${2:args}) {", "  ${3}", "}"]
+    "body": [
+      "${1:name}(${2:args}) {",
+      "  ${3}",
+      "}"
+    ]
   },
   "class bound method": {
     "prefix": "csmb",
-    "body": ["${1:name} = (${2:args}) => {", "  ${3}", "};"]
+    "body": [
+      "${1:name} = (${2:args}) => {",
+      "  ${3}",
+      "};"
+    ]
   },
   "class property": {
     "prefix": "csp",
@@ -84,31 +118,69 @@
   },
   "if statement": {
     "prefix": "if",
-    "body": ["if (${1:condition}) {", "  ${2}", "}"]
+    "body": [
+      "if (${1:condition}) {",
+      "  ${2}",
+      "}"
+    ]
   },
   "else statement": {
     "prefix": "el",
-    "body": ["else {", "  ${1}", "}"]
+    "body": [
+      "else {",
+      "  ${1}",
+      "}"
+    ]
   },
   "if/else statement": {
     "prefix": "ife",
-    "body": ["if (${1:condition}) {", "  ${2}", "} else {", "  ${3}", "}"]
+    "body": [
+      "if (${1:condition}) {",
+      "  ${2}",
+      "} else {",
+      "  ${3}",
+      "}"
+    ]
   },
   "else if statement": {
     "prefix": "ei",
-    "body": ["else if (${1:condition}) {", "  ${2}", "}"]
+    "body": [
+      "else if (${1:condition}) {",
+      "  ${2}",
+      "}"
+    ]
   },
   "try catch": {
     "prefix": "tc",
-    "body": ["try {", "  ${1}", "} catch (${2:err}) {", "  ${3}", "}"]
+    "body": [
+      "try {",
+      "  ${1}",
+      "} catch (${2:err}) {",
+      "  ${3}",
+      "}"
+    ]
   },
   "try finally": {
     "prefix": "tf",
-    "body": ["try {", "  ${1}", "} finally {", "  ${2}", "}"]
+    "body": [
+      "try {",
+      "  ${1}",
+      "} finally {",
+      "  ${2}",
+      "}"
+    ]
   },
   "try catch finally": {
     "prefix": "tcf",
-    "body": ["try {", "  ${1}", "} catch (${2:err}) {", "  ${3}", "} finally {", "  ${4}", "}"]
+    "body": [
+      "try {",
+      "  ${1}",
+      "} catch (${2:err}) {",
+      "  ${3}",
+      "} finally {",
+      "  ${4}",
+      "}"
+    ]
   },
   "throw error": {
     "prefix": "te",
@@ -148,11 +220,19 @@
   },
   "const object": {
     "prefix": "co",
-    "body": ["const ${1:name} = {", "  ${2}", "};"]
+    "body": [
+      "const ${1:name} = {",
+      "  ${2}",
+      "};"
+    ]
   },
   "const array": {
     "prefix": "ca",
-    "body": ["const ${1:name} = [", "  ${2}", "];"]
+    "body": [
+      "const ${1:name} = [",
+      "  ${2}",
+      "];"
+    ]
   },
   "anonymous function": {
     "prefix": "f",
@@ -188,7 +268,11 @@
   },
   "immediately-invoked function expression": {
     "prefix": "iife",
-    "body": [";(function (${1:args}) {", "  ${0}", "})(${2});"]
+    "body": [
+      ";(function (${1:args}) {",
+      "  ${0}",
+      "})(${2});"
+    ]
   },
   "function apply": {
     "prefix": "fa",
@@ -204,7 +288,11 @@
   },
   "for loop": {
     "prefix": "fl",
-    "body": ["for (let ${1:i} = 0; ${1:i} < ${2:iterable}${3:.length}; ${1:i}++) {", "  ${4}", "}"]
+    "body": [
+      "for (let ${1:i} = 0; ${1:i} < ${2:iterable}${3:.length}; ${1:i}++) {",
+      "  ${4}",
+      "}"
+    ]
   },
   "for in loop": {
     "prefix": "fil",
@@ -218,11 +306,19 @@
   },
   "for of loop": {
     "prefix": "fol",
-    "body": ["for (let ${1:key} of ${2:source}) {", "  ${3}", "}"]
+    "body": [
+      "for (let ${1:key} of ${2:source}) {",
+      "  ${3}",
+      "}"
+    ]
   },
   "while loop": {
     "prefix": "wl",
-    "body": ["while (${1:condition}) {", "  ${2}", "}"]
+    "body": [
+      "while (${1:condition}) {",
+      "  ${2}",
+      "}"
+    ]
   },
   "require module": {
     "prefix": "rq",
@@ -242,15 +338,15 @@
   },
   "import module": {
     "prefix": "im",
-    "body": "import ${2:name} from '${1:pkg}';"
+    "body": "import ${2:name} from '${1}';"
   },
-  "import module as": {
-    "prefix": "ima",
-    "body": "import ${2:*} as ${3:name} from '${1:pkg}';"
+  "import module as *": {
+    "prefix": "ims",
+    "body": "import ${2:*} as ${3:name} from '${1}';"
   },
   "import module named": {
     "prefix": "imn",
-    "body": "import { $2 } from '${1:pkg}';"
+    "body": "import { $2 } from '${1}';"
   },
   "return": {
     "prefix": "r",
@@ -278,19 +374,35 @@
   },
   "setTimeout": {
     "prefix": "st",
-    "body": ["setTimeout(() => {", "  ${0}", "}, ${1:0});"]
+    "body": [
+      "setTimeout(() => {",
+      "  ${0}",
+      "}, ${1:0});"
+    ]
   },
   "nextTick": {
     "prefix": "nt",
-    "body": ["process.nextTick(() => {", "  ${0}", "}${1:, args});"]
+    "body": [
+      "process.nextTick(() => {",
+      "  ${0}",
+      "}${1:, args});"
+    ]
   },
   "setInterval": {
     "prefix": "si",
-    "body": ["setInterval(() => {", "  ${0}", "}, ${1:0});"]
+    "body": [
+      "setInterval(() => {",
+      "  ${0}",
+      "}, ${1:0});"
+    ]
   },
   "setImmediate": {
     "prefix": "sim",
-    "body": ["setImmediate(() => {", "  ${0}", "});"]
+    "body": [
+      "setImmediate(() => {",
+      "  ${0}",
+      "});"
+    ]
   },
   "String": {
     "prefix": "S",
@@ -350,43 +462,83 @@
   },
   "Object.keys()": {
     "prefix": "Ok",
-    "body": ["Object.keys(${1:data}).forEach((key) => {", "  ${0}", "});"]
+    "body": [
+      "Object.keys(${1:data}).forEach((key) => {",
+      "  ${0}",
+      "});"
+    ]
   },
   "Object.values()": {
     "prefix": "Ov",
-    "body": ["Object.values(${1:data}).forEach((value) => {", "  ${0}", "});"]
+    "body": [
+      "Object.values(${1:data}).forEach((value) => {",
+      "  ${0}",
+      "});"
+    ]
   },
   "Object.entries()": {
     "prefix": "Oe",
-    "body": ["Object.entries(${1:data}).forEach(([key, value]) => {", "  ${0}", "});"]
+    "body": [
+      "Object.entries(${1:data}).forEach(([key, value]) => {",
+      "  ${0}",
+      "});"
+    ]
   },
   "synchronous it": {
     "prefix": "it",
-    "body": ["it('${1}', () => {", "  ${0}", "});"]
+    "body": [
+      "it('${1}', () => {",
+      "  ${0}",
+      "});"
+    ]
   },
   "async it": {
     "prefix": "ita",
-    "body": ["it('${1}', async () => {", "  ${0}", "});"]
+    "body": [
+      "it('${1}', async () => {",
+      "  ${0}",
+      "});"
+    ]
   },
   "describe": {
     "prefix": "de",
-    "body": ["describe('${1}', () => {", "  ${0}", "});"]
+    "body": [
+      "describe('${1}', () => {",
+      "  ${0}",
+      "});"
+    ]
   },
   "describe component": {
     "prefix": "dec",
-    "body": ["describe('<${1} />', () => {", "  ${0}", "});"]
+    "body": [
+      "describe('<${1} />', () => {",
+      "  ${0}",
+      "});"
+    ]
   },
   "describe method/function": {
     "prefix": "def",
-    "body": ["describe('${1}()', () => {", "  ${0}", "});"]
+    "body": [
+      "describe('${1}()', () => {",
+      "  ${0}",
+      "});"
+    ]
   },
   "before each": {
     "prefix": "be",
-    "body": ["beforeEach(() => {", "  ${0}", "});"]
+    "body": [
+      "beforeEach(() => {",
+      "  ${0}",
+      "});"
+    ]
   },
   "after each": {
     "prefix": "ae",
-    "body": ["afterEach(() => {", "  ${0}", "});"]
+    "body": [
+      "afterEach(() => {",
+      "  ${0}",
+      "});"
+    ]
   },
   "expect": {
     "prefix": "x",
@@ -402,10 +554,14 @@
   },
   "expect toThrowError": {
     "prefix": "xte",
-    "body": ["expect(() => {", "  ${1}", "}).toThrowError('${2:error}');"]
+    "body": [
+      "expect(() => {",
+      "  ${1}",
+      "}).toThrowError('${2:error}');"
+    ]
   },
   "expect toMatchSnapshot": {
-    "prefix": "xts",
+    "prefix": "xms",
     "body": "expect(${1:wrapper}).toMatchSnapshot();"
   },
   "expect toHaveBeenCalled": {
@@ -414,7 +570,7 @@
   },
   "expect toHaveBeenCalledWith": {
     "prefix": "xcw",
-    "body": "expect(${0:spy}).toHaveBeenCalled(${1});"
+    "body": "expect(${0:spy}).toHaveBeenCalledWith(${1});"
   },
   "expect toHaveLength": {
     "prefix": "xl",
@@ -422,27 +578,37 @@
   },
   "import type module": {
     "prefix": "imt",
-    "body": "import type ${2:name} from '${1:./types}';"
-  },
-  "import typeof module": {
-    "prefix": "imto",
-    "body": "import typeof ${2:name} from '${1}';"
+    "body": "import ${2:name} from '${1:./types}';"
   },
   "import type module named": {
     "prefix": "imtn",
-    "body": "import type { $2 } from '${1:./types}';"
+    "body": "import { $2 } from '${1:./types}';"
   },
   "export type": {
     "prefix": "ext",
     "body": "export type ${1} = ${2};"
   },
+  "export interface": {
+    "prefix": "exi",
+    "body": [
+      "export interface ${1} {",
+      "  ${2}",
+      "}"
+    ]
+  },
   "import React + PropTypes": {
     "prefix": "react",
-    "body": ["import React from 'react';", "import PropTypes from 'prop-types';"]
+    "body": [
+      "import React from 'react';",
+      "import PropTypes from 'prop-types';"
+    ]
   },
   "import React + Enzyme": {
     "prefix": "enzyme",
-    "body": ["import React from 'react';", "import { shallow } from 'enzyme';"]
+    "body": [
+      "import React from 'react';",
+      "import { shallow } from 'enzyme';"
+    ]
   },
   "React component": {
     "prefix": "comp",
@@ -472,62 +638,12 @@
       "}"
     ]
   },
-  "React component with context": {
-    "prefix": "compx",
-    "body": [
-      "export default class ${1:ComponentName} extends React.Component {",
-      "  static contextTypes = {};",
-      "",
-      "  static propTypes = {};",
-      "",
-      "  static defaultProps = {};",
-      "",
-      "  render() {",
-      "    return ${2:null};",
-      "  }",
-      "}"
-    ]
-  },
-  "React component defining context": {
-    "prefix": "compxx",
-    "body": [
-      "export default class ${1:ComponentName} extends React.Component {",
-      "  static childContextTypes = {};",
-      "",
-      "  static propTypes = {};",
-      "",
-      "  static defaultProps = {};",
-      "",
-      "  getChildContext() {",
-      "    return {};",
-      "  }",
-      "",
-      "  render() {",
-      "    return ${2:null};",
-      "  }",
-      "}"
-    ]
-  },
   "React stateless function component": {
     "prefix": "sfc",
     "body": [
       "export default function ${1:ComponentName}(props) {",
       "  return ${2:null};",
       "}",
-      "",
-      "${1:ComponentName}.propTypes = {};",
-      "",
-      "${1:ComponentName}.defaultProps = {};"
-    ]
-  },
-  "React stateless function component with context": {
-    "prefix": "sfcx",
-    "body": [
-      "export default function ${1:ComponentName}(props, context) {",
-      "  return ${2:null};",
-      "}",
-      "",
-      "${1:ComponentName}.contextTypes = {};",
       "",
       "${1:ComponentName}.propTypes = {};",
       "",

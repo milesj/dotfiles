@@ -13,5 +13,6 @@ code --install-extension esbenp.prettier-vscode
 code --install-extension robinbentley.sass-indented
 code --install-extension agauniyal.vscode-caniuse
 code --install-extension ms-vscode.atom-keybindings
+code --install-extension wayou.vscode-todo-highlight
 
 echo -e "\n\033[32mComplete!\033[0m"
