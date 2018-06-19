@@ -560,6 +560,14 @@
       "}).toThrowError('${2:error}');"
     ]
   },
+  "expect toThrowErrorMatchingShapshot": {
+    "prefix": "xtems",
+    "body": [
+      "expect(() => {",
+      "  ${1}",
+      "}).toThrowErrorMatchingShapshot();"
+    ]
+  },
   "expect toMatchSnapshot": {
     "prefix": "xms",
     "body": "expect(${1:wrapper}).toMatchSnapshot();"
@@ -624,10 +632,42 @@
       "}"
     ]
   },
+  "React component w/ TypeScript": {
+    "prefix": "tscomp",
+    "body": [
+      "export interface ${1:ComponentName}Props {}",
+      "",
+      "export default class ${1:ComponentName} extends React.Component<${1:ComponentName}Props> {",
+      "  static propTypes = {};",
+      "",
+      "  static defaultProps = {};",
+      "",
+      "  render() {",
+      "    return ${2:null};",
+      "  }",
+      "}"
+    ]
+  },
   "React pure component": {
     "prefix": "compp",
     "body": [
       "export default class ${1:ComponentName} extends React.PureComponent {",
+      "  static propTypes = {};",
+      "",
+      "  static defaultProps = {};",
+      "",
+      "  render() {",
+      "    return ${2:null};",
+      "  }",
+      "}"
+    ]
+  },
+  "React pure component w/ TypeScript": {
+    "prefix": "tscompp",
+    "body": [
+      "export interface ${1:ComponentName}Props {}",
+      "",
+      "export default class ${1:ComponentName} extends React.PureComponent<${1:ComponentName}Props> {",
       "  static propTypes = {};",
       "",
       "  static defaultProps = {};",
@@ -649,5 +689,37 @@
       "",
       "${1:ComponentName}.defaultProps = {};"
     ]
+  },
+  "React stateless function component w/ TypeScript": {
+    "prefix": "tssfc",
+    "body": [
+      "export interface ${1:ComponentName}Props {}",
+      "",
+      "const ${1:ComponentName}: React.SFC<${1:ComponentName}Props> = function ${1:ComponentName}(props) {",
+      "  return ${2:null};",
+      "}",
+      "",
+      "${1:ComponentName}.propTypes = {};",
+      "",
+      "${1:ComponentName}.defaultProps = {};",
+      "",
+      "export default ${1:ComponentName};"
+    ]
+  },
+  "eslint-disable": {
+    "prefix": "esld",
+    "body": "/* eslint-disable ${1} */"
+  },
+  "eslint-disable-line": {
+    "prefix": "esldl",
+    "body": "// eslint-disable-line ${1}"
+  },
+  "eslint-disable-next-line": {
+    "prefix": "esldnl",
+    "body": "// eslint-disable-next-line ${1}"
+  },
+  "ts-ignore": {
+    "prefix": "tsi",
+    "body": "// @ts-ignore ${1}"
   }
 }
