@@ -16,7 +16,6 @@ brew upgrade
 # Clean old packages
 echo "···· Cleaning up"
 brew cleanup
-brew cask cleanup
 brew doctor
 brew prune
 

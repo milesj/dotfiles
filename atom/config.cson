@@ -153,6 +153,7 @@
       "nuclide-debugger-iwdp": false
       "nuclide-debugger-java": "default"
       "nuclide-debugger-native": "never"
+      "nuclide-debugger-new": "default"
       "nuclide-debugger-node": false
       "nuclide-debugger-php": "never"
       "nuclide-debugger-vsp": "default"
@@ -213,6 +214,7 @@
       "nuclide-swift": "never"
       "nuclide-syntactic-selection": "default"
       "nuclide-task-runner": "default"
+      "nuclide-terminal": "default"
       "nuclide-test-runner": "default"
       "nuclide-type-coverage": "default"
       "nuclide-type-hint": "default"

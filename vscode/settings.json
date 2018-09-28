@@ -2,6 +2,7 @@
   "atomKeymap.promptV3Features": true,
   "git.checkoutType": "local",
   "eslint.alwaysShowStatus": true,
+  "eslint.autoFixOnSave": false,
   "eslint.run": "onSave",
   "eslint.validate": [
     "javascript",
@@ -9,8 +10,6 @@
     "typescript",
     "typescriptreact"
   ],
-  "json.experimental.syntaxFolding": true,
-  "html.experimental.syntaxFolding": true,
   "html.format.endWithNewline": true,
   "update.enableWindowsBackgroundUpdates": true,
   "files.autoGuessEncoding": false,
@@ -42,5 +41,12 @@
     "TODO",
     "TEMP",
     "FIXME"
-  ]
+  ],
+  "prettier.printWidth": 100,
+  "prettier.proseWrap": "always",
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "all",
+  "javascript.validate.enable": true,
+  "javascript.updateImportsOnFileMove.enabled": "never",
+  "typescript.updateImportsOnFileMove.enabled": "never"
 }
