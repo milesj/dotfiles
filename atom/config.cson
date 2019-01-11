@@ -33,6 +33,7 @@
       "linter"
       "tree-view"
       "language-php"
+      "image-view"
     ]
     openEmptyEditorOnStart: false
     projectHome: "~/Sites/"

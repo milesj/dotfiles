@@ -48,5 +48,8 @@
   "prettier.trailingComma": "all",
   "javascript.validate.enable": true,
   "javascript.updateImportsOnFileMove.enabled": "never",
-  "typescript.updateImportsOnFileMove.enabled": "never"
+  "typescript.updateImportsOnFileMove.enabled": "never",
+  "go.formatTool": "gofmt",
+  "go.formatOnSave": true,
+  "go.lintOnSave": "file"
 }
