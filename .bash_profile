@@ -1,7 +1,7 @@
 # BASH PROFILE
 # All bootstrapping related to the current user and or profile should be defined here.
 
-export PATH="/usr/local/opt/curl/bin:$PATH"
+export PATH="/usr/local/opt/curl/bin:/usr/local/bin:$PATH"
 
 # Load our dotfiles.
 for file in ~/.{extra,bash_prompt,exports,aliases,functions}; do
