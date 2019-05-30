@@ -38,6 +38,7 @@ symlink "$dots/vscode/snippets.json" "$HOME/Library/Application Support/Code/Use
 echo ".... Linking Hyper settings"
 mkdir -p "$HOME/Library/Application Support/Hyper"
 symlink "$dots/hyper/config.js" "$HOME/Library/Application Support/Hyper/.hyper.js"
+symlink "$dots/hyper/config.js" "$HOME/.hyper.js"
 
 echo ".... Linking VIM color scheme"
 mkdir -p "$HOME/.vim/colors"
