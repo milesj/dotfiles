@@ -35,9 +35,14 @@ echo "···· Linking VSCode settings"
 symlink "$dots/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
 symlink "$dots/vscode/snippets.json" "$HOME/Library/Application Support/Code/User/snippets/javascript.code-snippets"
 
+echo ".... Linking Hyper settings"
+mkdir -p "$HOME/Library/Application Support/Hyper"
+symlink "$dots/hyper/config.js" "$HOME/Library/Application Support/Hyper/.hyper.js"
+
 echo ".... Linking VIM color scheme"
 mkdir -p "$HOME/.vim/colors"
 symlink "$dots/vim/colors/onedark.vim" "$HOME/.vim/colors/onedark.vim"
+
 
 # Source the profile
 echo "···· Setting up Bash"

@@ -23,7 +23,6 @@
   "editor.wordWrap": "wordWrapColumn",
   "editor.wordWrapColumn": 100,
   "editor.fontLigatures": true,
-  "editor.formatOnSave": true,
   "editor.minimap.enabled": false,
   "editor.snippetSuggestions": "top",
   "workbench.statusBar.visible": true,
@@ -51,5 +50,14 @@
   "typescript.updateImportsOnFileMove.enabled": "never",
   "go.formatTool": "gofmt",
   "go.formatOnSave": true,
-  "go.lintOnSave": "file"
+  "go.lintOnSave": "file",
+  "window.zoomLevel": 0,
+  "editor.formatOnSave": true,
+  "breadcrumbs.enabled": true,
+  "emmet.showExpandedAbbreviation": "inMarkupAndStylesheetFilesOnly",
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }

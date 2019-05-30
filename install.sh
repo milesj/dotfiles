@@ -24,8 +24,6 @@ fi;
 echo "···· Tapping dependencies"
 brew tap caskroom/cask
 brew tap homebrew/dupes
-brew tap homebrew/versions
-brew tap homebrew/homebrew-php
 
 echo "···· Installing packages"
 brew install vim --override-system-vi
@@ -33,7 +31,7 @@ brew install git
 brew install scmpuff
 brew install curl
 brew install openssl
-brew install node yarn
+brew install node
 brew install rbenv ruby-build
 brew install rust
 

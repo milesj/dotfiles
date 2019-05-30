@@ -11,7 +11,6 @@ apm install file-icons
 apm install fonts
 apm install highlight-selected
 apm install hyperclick
-apm install hyperclick-php
 apm install intentions
 apm install js-hyperclick
 apm install language-babel
@@ -20,7 +19,6 @@ apm install language-ini
 apm install language-rust
 apm install linter-eslint
 apm install linter-markdown
-apm install linter-php
 apm install linter-ruby
 apm install linter-rust
 apm install linter-sass-lint
