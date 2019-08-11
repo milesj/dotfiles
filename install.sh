@@ -32,8 +32,7 @@ brew install scmpuff
 brew install curl
 brew install openssl
 brew install node
-brew install rbenv ruby-build
-brew install rust
+brew install fish
 
 echo "···· Verifying install"
 brew doctor
@@ -56,6 +55,9 @@ git config --global user.email "$email"
 # 4) Setup OSX
 echo -e "\n\033[32mSetting Up OSX\033[0m"
 bash "$dots/.osx"
+
+# Setup Fish
+curl -L https://get.oh-my.fish | fish
 
 # 5) Done
 echo -e "\n\033[32mComplete!\033[0m"

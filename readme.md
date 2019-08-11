@@ -16,6 +16,7 @@ bash ~/.dotfiles/install.sh
 
 Will install the following:
 
+- Fish shell
 - Tools: Homebrew, Git, Vim
 - Languages: Node.js, Ruby, Rust
 - Applications: Chrome, Firefox, Spotify, Slack, and many more

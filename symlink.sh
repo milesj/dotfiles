@@ -47,7 +47,3 @@ symlink "$dots/hyper/config.js" "$HOME/.hyper.js"
 echo ".... Linking VIM"
 mkdir -p "$HOME/.vim/colors"
 symlink "$dots/vim/colors/onedark.vim" "$HOME/.vim/colors/onedark.vim"
-
-# Source the profile
-echo "···· Setting up Bash"
-source "$HOME/.bash_profile"
