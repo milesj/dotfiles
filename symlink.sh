@@ -1,19 +1,15 @@
-#!/usr/bin/env bash
-
-# SYMLINK
-# Symlinks the dotfiles to the users home directory.
-
-dots="$HOME/.dotfiles";
+DOTS="$HOME/.dotfiles"
 
 function symlink {
     rm -f "$2"
     ln -sf "$1" "$2"
 }
 
-# Symlink dotfiles
-echo "···· Linking dotfiles";
+echo -e "\033[32mSymlinking Configuration\033[0m"
 
-for from in $(find $dots -name ".*" -type f -maxdepth 1); do
+echo "···· Linking dotfiles"
+
+for from in $(find $DOTS -name ".*" -type f -maxdepth 1); do
     file="${from##*/}";
     to="$HOME/$file";
 
@@ -25,26 +21,30 @@ for from in $(find $dots -name ".*" -type f -maxdepth 1); do
     symlink $from $to;
 done
 
-# Symlink certain files manually
-echo "···· Linking Atom settings"
+echo "···· Linking Fish"
+
+mkdir -p "$HOME/.config/fish"
+symlink "$DOTS/fish/config.fish" "$HOME/.config/fish/config.fish"
+symlink "$DOTS/fish/plugins" "$HOME/.config/fish/fishfile"
+
+echo "···· Linking Atom"
+
 mkdir -p "$HOME/.atom"
-symlink "$dots/atom/config.cson" "$HOME/.atom/config.cson"
-symlink "$dots/atom/snippets.cson" "$HOME/.atom/snippets.cson"
+symlink "$DOTS/atom/config.cson" "$HOME/.atom/config.cson"
+symlink "$DOTS/atom/snippets.cson" "$HOME/.atom/snippets.cson"
 
-echo "···· Linking VSCode settings"
-symlink "$dots/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
-symlink "$dots/vscode/snippets.json" "$HOME/Library/Application Support/Code/User/snippets/javascript.code-snippets"
+echo "···· Linking VSCode"
 
-echo ".... Linking Hyper settings"
+symlink "$DOTS/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
+symlink "$DOTS/vscode/snippets.json" "$HOME/Library/Application Support/Code/User/snippets/javascript.code-snippets"
+
+echo ".... Linking Hyper"
+
 mkdir -p "$HOME/Library/Application Support/Hyper"
-symlink "$dots/hyper/config.js" "$HOME/Library/Application Support/Hyper/.hyper.js"
-symlink "$dots/hyper/config.js" "$HOME/.hyper.js"
+symlink "$DOTS/hyper/config.js" "$HOME/Library/Application Support/Hyper/.hyper.js"
+symlink "$DOTS/hyper/config.js" "$HOME/.hyper.js"
 
-echo ".... Linking VIM color scheme"
+echo ".... Linking VIM"
+
 mkdir -p "$HOME/.vim/colors"
-symlink "$dots/vim/colors/onedark.vim" "$HOME/.vim/colors/onedark.vim"
-
-
-# Source the profile
-echo "···· Setting up Bash"
-source "$HOME/.bash_profile"
+symlink "$DOTS/vim/colors/onedark.vim" "$HOME/.vim/colors/onedark.vim"

@@ -16,10 +16,13 @@ bash ~/.dotfiles/install.sh
 
 Will install the following:
 
+- Fish shell
 - Tools: Homebrew, Git, Vim
 - Languages: Node.js, Ruby, Rust
 - Applications: Chrome, Firefox, Spotify, Slack, and many more
 - Atom + VSCode Packages (apps must be installed first)
+
+Then add `/usr/local/bin/fish` support to `/etc/shells` and run `chsh -s /usr/local/bin/fish`.
 
 ### Update
 
