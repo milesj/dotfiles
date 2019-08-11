@@ -1,29 +1,19 @@
-#!/usr/bin/env bash
+set DOTS "$HOME/.dotfiles"
 
-# INSTALL
-# Will install brew dependencies and symlink configuration.
-
-sudo -v
-
-dots="$HOME/.dotfiles";
-
-if [ ! -d "$dots" ]; then
+if not test -d $DOTS
     echo "~/.dotfiles/ does not exist!";
     exit 1;
-fi;
-
-source "$dots/.functions";
+end
 
 # 1) Homebrew
 echo -e "\033[32mInstalling Homebrew\033[0m"
 
-if ! exists brew; then
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)";
-fi;
+if not type -q brew
+    ruby -e "(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)";
+end
 
 echo "···· Tapping dependencies"
 brew tap caskroom/cask
-brew tap homebrew/dupes
 
 echo "···· Installing packages"
 brew install vim --override-system-vi
@@ -37,11 +27,15 @@ brew install fish
 echo "···· Verifying install"
 brew doctor
 
-# 2) Symlink config
-echo -e "\n\033[32mSymlinking Configuration\033[0m"
-bash "$dots/symlink.sh"
+# 2) Fish
+echo -e "\n\033[32mSetting up Fish\033[0m"
 
-# 3) Setup git
+curl -L https://get.oh-my.fish | fish
+
+# 3) Symlink
+fish "$DOTS/symlink.fish"
+
+# 4) Git
 echo -e "\n\033[32mSetting Up Git\033[0m"
 
 echo -n "···· Name [enter]: "
@@ -52,12 +46,7 @@ echo -n "···· Email [enter]: "
 read email
 git config --global user.email "$email"
 
-# 4) Setup OSX
+# 5) OSX
 echo -e "\n\033[32mSetting Up OSX\033[0m"
-bash "$dots/.osx"
 
-# Setup Fish
-curl -L https://get.oh-my.fish | fish
-
-# 5) Done
-echo -e "\n\033[32mComplete!\033[0m"
+bash "$DOTS/.osx"

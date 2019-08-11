@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 echo -e "\033[32mInstalling VSCode extensions\033[0m"
 
 code --install-extension akamud.vscode-theme-onedark
@@ -17,5 +15,3 @@ code --install-extension wayou.vscode-todo-highlight
 code --install-extension qassimfarid.ejs-language-support
 code --install-extension ms-azuretools.vscode-docker
 code --install-extension kumar-harsh.graphql-for-vscode
-
-echo -e "\n\033[32mComplete!\033[0m"
