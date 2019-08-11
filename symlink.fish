@@ -5,7 +5,7 @@ function symlink -a from to
     ln -sf "$from" "$to"
 end
 
-echo -e "\n\033[32mSymlinking Configuration\033[0m"
+echo -e "\033[32mSymlinking Configuration\033[0m"
 
 echo "···· Linking dotfiles"
 
@@ -26,6 +26,7 @@ echo "···· Linking Fish"
 mkdir -p "$HOME/.config/fish"
 symlink "$DOTS/fish/config.fish" "$HOME/.config/fish/config.fish"
 symlink "$DOTS/fish/plugins" "$HOME/.config/fish/fishfile"
+fish -c fisher
 
 echo "···· Linking Atom"
 

@@ -28,16 +28,15 @@ echo "···· Verifying install"
 brew doctor
 
 # 2) Fish
-echo -e "\n\033[32mSetting up Fish\033[0m"
+echo -e "\033[32mSetting Up Fish\033[0m"
 
-curl https://get.oh-my.fish -L | fish
 curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
 
 # 3) Symlink
 fish "$DOTS/symlink.fish"
 
 # 4) Git
-echo -e "\n\033[32mSetting Up Git\033[0m"
+echo -e "\033[32mSetting Up Git\033[0m"
 
 echo -n "···· Name [enter]: "
 read name
@@ -48,6 +47,6 @@ read email
 git config --global user.email "$email"
 
 # 5) OSX
-echo -e "\n\033[32mSetting Up OSX\033[0m"
+echo -e "\033[32mSetting Up OSX\033[0m"
 
 bash "$DOTS/.osx"
