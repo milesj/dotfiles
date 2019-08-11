@@ -26,24 +26,27 @@ for from in $(find $dots -name ".*" -type f -maxdepth 1); do
 done
 
 # Symlink certain files manually
-echo "···· Linking Atom settings"
+echo "···· Linking Fish"
+mkdir -p "$HOME/.config/fish"
+symlink "$dots/fish/config.fish" "$HOME/.config/fish/config.fish"
+
+echo "···· Linking Atom"
 mkdir -p "$HOME/.atom"
 symlink "$dots/atom/config.cson" "$HOME/.atom/config.cson"
 symlink "$dots/atom/snippets.cson" "$HOME/.atom/snippets.cson"
 
-echo "···· Linking VSCode settings"
+echo "···· Linking VSCode"
 symlink "$dots/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
 symlink "$dots/vscode/snippets.json" "$HOME/Library/Application Support/Code/User/snippets/javascript.code-snippets"
 
-echo ".... Linking Hyper settings"
+echo ".... Linking Hyper"
 mkdir -p "$HOME/Library/Application Support/Hyper"
 symlink "$dots/hyper/config.js" "$HOME/Library/Application Support/Hyper/.hyper.js"
 symlink "$dots/hyper/config.js" "$HOME/.hyper.js"
 
-echo ".... Linking VIM color scheme"
+echo ".... Linking VIM"
 mkdir -p "$HOME/.vim/colors"
 symlink "$dots/vim/colors/onedark.vim" "$HOME/.vim/colors/onedark.vim"
-
 
 # Source the profile
 echo "···· Setting up Bash"

@@ -11,5 +11,6 @@ brew cask install dashlane
 brew cask install virtualbox
 brew cask install vagrant
 brew cask install vlc
+brew cask install vscode
 
 echo -e "\n\033[32mComplete!\033[0m"
