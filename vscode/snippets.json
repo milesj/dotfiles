@@ -612,7 +612,7 @@
       "}"
     ]
   },
-  "import React + PropTypes": {
+  "import React": {
     "prefix": "react",
     "body": [
       "import React from 'react';"
