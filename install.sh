@@ -23,7 +23,6 @@ brew install git
 brew install scmpuff
 brew install curl
 brew install openssl
-brew install node
 brew install fish
 
 echo "···· Verifying install"
@@ -53,3 +52,9 @@ git config --global user.email "$email"
 echo -e "\033[32mSetting Up OSX\033[0m"
 
 bash "$DOTS/.osx"
+
+# 6) Node
+echo -e "\033[32mSetting Up Node\033[0m"
+
+nvm use 12
+npm install -g yarn
