@@ -2,7 +2,7 @@
 # All configuration related to exports should be defined here.
 
 set -x TERM xterm-256color
-set -x EDITOR "vim" # atom
+set -x EDITOR vim
 set -x HISTCONTROL ignorespace:ignoredups
 
 # Languages

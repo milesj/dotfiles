@@ -7,6 +7,9 @@ set PATH /usr/local/opt/curl/bin /usr/local/bin /usr/local/sbin $PATH
 # Remove fish greeting
 set fish_greeting
 
+# Enable full colors
+set fish_term256 1
+
 # Source aliases and exports
 source "$HOME/.dotfiles/fish/aliases.fish"
 source "$HOME/.dotfiles/fish/exports.fish"
