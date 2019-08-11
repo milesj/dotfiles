@@ -9,7 +9,7 @@ echo -e "\033[32mSymlinking Configuration\033[0m"
 
 echo "···· Linking dotfiles"
 
-for from in $(find $dots -name ".*" -type f -maxdepth 1); do
+for from in $(find $DOTS -name ".*" -type f -maxdepth 1); do
     file="${from##*/}";
     to="$HOME/$file";
 
@@ -26,7 +26,6 @@ echo "···· Linking Fish"
 mkdir -p "$HOME/.config/fish"
 symlink "$DOTS/fish/config.fish" "$HOME/.config/fish/config.fish"
 symlink "$DOTS/fish/plugins" "$HOME/.config/fish/fishfile"
-fish -c fisher
 
 echo "···· Linking Atom"
 

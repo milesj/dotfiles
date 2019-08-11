@@ -29,13 +29,14 @@ brew install fish
 echo "···· Verifying install"
 brew doctor
 
-# 2) Fish
+# 2) Symlink
+bash "$DOTS/symlink.sh"
+
+# 3) Fish
 echo -e "\033[32mSetting Up Fish\033[0m"
 
 curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
-
-# 3) Symlink
-bash "$DOTS/symlink.sh"
+fish -c fisher
 
 # 4) Git
 echo -e "\033[32mSetting Up Git\033[0m"
