@@ -7,8 +7,3 @@ set PATH /usr/local/opt/curl/bin /usr/local/bin /usr/local/sbin $PATH
 # Source aliases and exports
 source "$HOME/.dotfiles/fish/aliases.fish"
 source "$HOME/.dotfiles/fish/exports.fish"
-
-# Initialize scmpuff for git
-if type -q scmpuff
-    # command scmpuff init -s --aliases=false
-end

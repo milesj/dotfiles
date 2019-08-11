@@ -1,15 +1,15 @@
 set DOTS "$HOME/.dotfiles"
 
 if not test -d $DOTS
-    echo "~/.dotfiles/ does not exist!";
-    exit 1;
+    echo "~/.dotfiles/ does not exist!"
+    exit 1
 end
 
 # 1) Homebrew
 echo -e "\033[32mInstalling Homebrew\033[0m"
 
 if not type -q brew
-    ruby -e "(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)";
+    ruby -e "(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 end
 
 echo "···· Tapping dependencies"
@@ -30,7 +30,8 @@ brew doctor
 # 2) Fish
 echo -e "\n\033[32mSetting up Fish\033[0m"
 
-curl -L https://get.oh-my.fish | fish
+curl https://get.oh-my.fish -L | fish
+curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
 
 # 3) Symlink
 fish "$DOTS/symlink.fish"

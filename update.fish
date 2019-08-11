@@ -7,11 +7,11 @@ echo "···· Upgrading"
 brew update
 brew upgrade
 echo "···· Cleaning up"
-brew cleanup --prune
+brew cleanup --prune 7
 brew doctor
 
 # 2) Git
-echo -e "\n\033[32mUpdating Repository\033[0m"
+echo -e "\n\033[32mUpdating Git\033[0m"
 
 cd $DOTS
 git stash
@@ -19,5 +19,10 @@ git pull --rebase origin master
 git stash apply
 git stash clear
 
-# 3) Symlink
+# 3) Fish
+echo -e "\n\033[32mUpdating Fish\033[0m"
+
+fisher self-update
+
+# 4) Symlink
 fish "$DOTS/symlink.fish"
