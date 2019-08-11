@@ -1,16 +1,18 @@
-set DOTS "$HOME/.dotfiles"
+sudo -v
 
-if not test -d $DOTS
-    echo "~/.dotfiles/ does not exist!"
-    exit 1
-end
+DOTS="$HOME/.dotfiles"
+
+if [ ! -d "$DOTS" ]; then
+    echo "~/.dotfiles/ does not exist!";
+    exit 1;
+fi;
 
 # 1) Homebrew
 echo -e "\033[32mInstalling Homebrew\033[0m"
 
-if not type -q brew
-    ruby -e "(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-end
+if ! exists brew; then
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)";
+fi;
 
 echo "···· Tapping dependencies"
 brew tap caskroom/cask
@@ -33,7 +35,7 @@ echo -e "\033[32mSetting Up Fish\033[0m"
 curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
 
 # 3) Symlink
-fish "$DOTS/symlink.fish"
+bash "$DOTS/symlink.sh"
 
 # 4) Git
 echo -e "\033[32mSetting Up Git\033[0m"

@@ -1,4 +1,4 @@
-set DOTS "$HOME/.dotfiles"
+DOTS="$HOME/.dotfiles"
 
 # 1) Homebrew
 echo -e "\033[32mUpdating Homebrew\033[0m"
@@ -6,6 +6,7 @@ echo -e "\033[32mUpdating Homebrew\033[0m"
 echo "···· Upgrading"
 brew update
 brew upgrade
+
 echo "···· Cleaning up"
 brew cleanup --prune 7
 brew doctor
@@ -25,4 +26,4 @@ echo -e "\033[32mUpdating Fish\033[0m"
 fisher self-update
 
 # 4) Symlink
-fish "$DOTS/symlink.fish"
+bash "$DOTS/symlink.sh"
