@@ -12,7 +12,8 @@ module.exports = {
     fontSize: 12,
 
     // font family with optional fallbacks
-    fontFamily: 'Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
+    fontFamily:
+      'Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", "Source Code Pro for Powerline", monospace',
 
     // default font weight: 'normal' or 'bold'
     fontWeight: 'normal',
@@ -27,7 +28,7 @@ module.exports = {
     letterSpacing: 0,
 
     // terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
-    cursorColor: 'rgba(248, 28, 229, 0.8)',
+    cursorColor: 'rgba(248, 28, 229, .8)',
 
     // terminal text color under BLOCK cursor
     cursorAccentColor: '#000',
@@ -43,10 +44,10 @@ module.exports = {
 
     // terminal background color
     // opacity is only supported on macOS
-    backgroundColor: 'rgba(0, 0, 0, 0.9)',
+    backgroundColor: 'rgba(0, 0, 0, .85)',
 
     // terminal selection color
-    selectionColor: 'rgba(248,28,229,0.3)',
+    selectionColor: 'rgba(248, 28, 229, .3)',
 
     // border color (window, tabs)
     borderColor: '#333',
@@ -139,6 +140,14 @@ module.exports = {
 
     // Size of window when launched
     windowSize: [1350, 700],
+
+    // Theme overrides
+    verminal: {
+      fontFamily:
+        '"SF Mono", "Monaco", "Inconsolata", "Fira Mono", "Droid Sans Mono", "Source Code Pro for Powerline", "Source Code Pro", monospace',
+      backgroundColor: 'rgba(0, 0, 0, .85)',
+    },
+
     // for advanced config flags please refer to https://hyper.is/#cfg
   },
 
