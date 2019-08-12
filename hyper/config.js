@@ -37,7 +37,7 @@ module.exports = {
     cursorShape: 'BLOCK',
 
     // set to `true` (without backticks and without quotes) for blinking cursor
-    cursorBlink: false,
+    cursorBlink: true,
 
     // color of the text
     foregroundColor: '#fff',
@@ -140,6 +140,9 @@ module.exports = {
 
     // Size of window when launched
     windowSize: [1350, 700],
+
+    // The number of rows to be persisted in terminal buffer for scrolling
+    scrollback: 10000,
 
     // Theme overrides
     verminal: {

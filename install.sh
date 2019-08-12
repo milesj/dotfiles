@@ -2,6 +2,10 @@ sudo -v
 
 DOTS="$HOME/.dotfiles"
 
+function exists() {
+    command -v "$1" >/dev/null 2>&1;
+}
+
 if [ ! -d "$DOTS" ]; then
     echo "~/.dotfiles/ does not exist!";
     exit 1;
@@ -18,7 +22,6 @@ echo "···· Tapping dependencies"
 brew tap caskroom/cask
 
 echo "···· Installing packages"
-brew install vim --override-system-vi
 brew install git
 brew install scmpuff
 brew install curl
