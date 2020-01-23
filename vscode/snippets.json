@@ -16,7 +16,7 @@
     ]
   },
   "promise then": {
-    "prefix": "thn",
+    "prefix": "then",
     "body": [
       ".then((value) => {",
       "  ${0}",
@@ -26,7 +26,7 @@
     ]
   },
   "promise inline then": {
-    "prefix": "thni",
+    "prefix": "theni",
     "body": [
       ".then(value => (",
       "  ${0}",
@@ -59,7 +59,7 @@
     "prefix": "cs",
     "body": [
       "class ${1:ClassName} {",
-      "  constructor(${2:args}) {",
+      "  constructor(${2}) {",
       "    ${3}",
       "  }",
       "}"
@@ -69,8 +69,8 @@
     "prefix": "csx",
     "body": [
       "class ${1:ClassName} extends ${2:BaseClass} {",
-      "  constructor(${3:args}) {",
-      "    super(${3:args});",
+      "  constructor(${3}) {",
+      "    super(${3});",
       "    ${4}",
       "  }",
       "}"
@@ -79,7 +79,7 @@
   "class method": {
     "prefix": "csm",
     "body": [
-      "${1:name}(${2:args}) {",
+      "${1:name}(${2}) {",
       "  ${3}",
       "}"
     ]
@@ -87,7 +87,7 @@
   "class bound method": {
     "prefix": "csmb",
     "body": [
-      "${1:name} = (${2:args}) => {",
+      "${1:name} = (${2}) => {",
       "  ${3}",
       "};"
     ]
@@ -236,55 +236,55 @@
   },
   "anonymous function": {
     "prefix": "f",
-    "body": "function (${1:args}) {${0}}"
+    "body": "function (${1}) {${0}}"
   },
   "named function": {
     "prefix": "fn",
-    "body": "function ${1:name}(${2:args}) {${0}}"
+    "body": "function ${1:name}(${2}) {${0}}"
   },
   "async anonymous function": {
     "prefix": "asf",
-    "body": "async function (${1:args}) {${0}}"
+    "body": "async function (${1}) {${0}}"
   },
   "async named function": {
     "prefix": "asfn",
-    "body": "async function ${1:name} (${2:args}) {${0}}"
+    "body": "async function ${1:name} (${2}) {${0}}"
   },
   "arrow function": {
     "prefix": "af",
-    "body": "(${1:args}) => ${2:statement};"
+    "body": "(${1}) => ${2:statement};"
   },
   "arrow function with body": {
     "prefix": "afn",
-    "body": "(${1:args}) => {${0}};"
+    "body": "(${1}) => {${0}};"
   },
   "generator": {
     "prefix": "gf",
-    "body": "function * (${1:args}) {${0}}"
+    "body": "function * (${1}) {${0}}"
   },
   "named generator": {
     "prefix": "gfn",
-    "body": "function * ${1:name} (${2:args}) {${0}}"
+    "body": "function * ${1:name} (${2}) {${0}}"
   },
   "immediately-invoked function expression": {
     "prefix": "iife",
     "body": [
-      ";(function (${1:args}) {",
+      ";(function (${1}) {",
       "  ${0}",
       "})(${2});"
     ]
   },
   "function apply": {
     "prefix": "fa",
-    "body": "${1:fn}.apply(${2:this}, ${3:args});"
+    "body": "${1:fn}.apply(${2:this}, ${3});"
   },
   "function call": {
     "prefix": "fc",
-    "body": "${1:fn}.call(${2:this}, ${3:args});"
+    "body": "${1:fn}.call(${2:this}, ${3});"
   },
   "function bind": {
     "prefix": "fb",
-    "body": "${1:fn}.bind(${2:this}, ${3:args});"
+    "body": "${1:fn}.bind(${2:this}, ${3});"
   },
   "for loop": {
     "prefix": "for",
@@ -470,6 +470,10 @@
   },
   "Object.keys()": {
     "prefix": "Ok",
+    "body": "Object.keys(${1:data})"
+  },
+  "Object.keys() loop": {
+    "prefix": "Okl",
     "body": [
       "Object.keys(${1:data}).forEach((key) => {",
       "  ${0}",
@@ -478,6 +482,10 @@
   },
   "Object.values()": {
     "prefix": "Ov",
+    "body": "Object.values(${1:data})"
+  },
+  "Object.values() loop": {
+    "prefix": "Ovl",
     "body": [
       "Object.values(${1:data}).forEach((value) => {",
       "  ${0}",
@@ -486,6 +494,10 @@
   },
   "Object.entries()": {
     "prefix": "Oe",
+    "body": "Object.entries(${1:data})"
+  },
+  "Object.entries() loop": {
+    "prefix": "Oel",
     "body": [
       "Object.entries(${1:data}).forEach(([key, value]) => {",
       "  ${0}",
@@ -565,7 +577,7 @@
     "body": [
       "expect(() => {",
       "  ${1}",
-      "}).toThrowError('${2:error}');"
+      "}).toThrow('${2:error}');"
     ]
   },
   "expect toThrowErrorMatchingShapshot": {
@@ -592,13 +604,13 @@
     "prefix": "xhl",
     "body": "expect(${0:wrapper}).toHaveLength(${1:0});"
   },
-  "import type module": {
+  "import types module": {
     "prefix": "imt",
-    "body": "import ${2:name} from '${1:./types}';"
+    "body": "import { $1 } from './types';"
   },
-  "import type module named": {
-    "prefix": "imtn",
-    "body": "import { $2 } from '${1:./types}';"
+  "import constants module": {
+    "prefix": "imc",
+    "body": "import { $1 } from './constants';"
   },
   "export type": {
     "prefix": "ext",
@@ -623,6 +635,13 @@
     "body": [
       "import React from 'react';",
       "import { shallow } from 'enzyme';"
+    ]
+  },
+  "import React + Rut": {
+    "prefix": "rut",
+    "body": [
+      "import React from 'react';",
+      "import { render } from 'rut-dom';"
     ]
   },
   "React class component": {
@@ -674,5 +693,9 @@
   "ts-ignore": {
     "prefix": "tsi",
     "body": "// @ts-ignore ${1}"
+  },
+  "istanbul ignore next": {
+    "prefix": "iin",
+    "body": "// istanbul ignore next"
   }
 }
