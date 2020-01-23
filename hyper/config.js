@@ -9,7 +9,7 @@ module.exports = {
     updateChannel: 'stable',
 
     // default font size in pixels for all tabs
-    fontSize: 12,
+    fontSize: 13,
 
     // font family with optional fallbacks
     fontFamily:
@@ -148,7 +148,7 @@ module.exports = {
     verminal: {
       fontFamily:
         '"SF Mono", "Monaco", "Inconsolata", "Fira Mono", "Droid Sans Mono", "Source Code Pro for Powerline", "Source Code Pro", monospace',
-      backgroundColor: 'rgba(0, 0, 0, .85)',
+      backgroundColor: 'rgba(0, 0, 0, 0.85)',
     },
 
     // for advanced config flags please refer to https://hyper.is/#cfg
