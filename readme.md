@@ -24,6 +24,8 @@ Will install the following:
 
 Then add `/usr/local/bin/fish` support to `/etc/shells` and run `chsh -s /usr/local/bin/fish`.
 
+And finally, install the Powerline fonts. https://github.com/powerline/fonts
+
 ### Update
 
 This will update Homebrew, Atom, VSCode, and any packages, fetch the latest Git repository (will

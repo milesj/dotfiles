@@ -27,6 +27,7 @@ brew install scmpuff
 brew install curl
 brew install openssl
 brew install fish
+brew install nvm
 
 echo "···· Verifying install"
 brew doctor
@@ -59,5 +60,5 @@ bash "$DOTS/.osx"
 # 6) Node
 echo -e "\033[32mSetting Up Node\033[0m"
 
-nvm use 12
+nvm use 10
 npm install -g yarn
