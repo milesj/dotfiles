@@ -148,7 +148,7 @@ module.exports = {
     verminal: {
       fontFamily:
         '"SF Mono", "Monaco", "Inconsolata", "Fira Mono", "Droid Sans Mono", "Source Code Pro for Powerline", "Source Code Pro", monospace',
-      backgroundColor: 'rgba(0, 0, 0, 0.80)',
+      backgroundColor: 'rgba(0, 0, 0, .80)',
     },
 
     // for advanced config flags please refer to https://hyper.is/#cfg

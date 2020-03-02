@@ -75,7 +75,8 @@
       ".tsx"
     ]
   "linter-eslint":
-    globalNodePath: "/usr/local"
+    global:
+      globalNodePath: "/usr/local"
   "linter-sass-lint":
     globalNodePath: "/usr/local"
     noConfigDisable: true

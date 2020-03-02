@@ -33,7 +33,8 @@
     "typescriptreact"
   ],
   "files.associations": {
-    "Vagrantfile": "ruby"
+    "Vagrantfile": "ruby",
+    "Dockerfile.dev": "docker"
   },
   "files.autoGuessEncoding": false,
   "files.autoSave": "onFocusChange",
@@ -51,7 +52,6 @@
     "story.ts": "storybook",
     "story.tsx": "storybook"
   },
-  "prettier.configPath": "prettier.config.js",
   "todohighlight.keywords": [
     "TODO",
     "FIXME"
