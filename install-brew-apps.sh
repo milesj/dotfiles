@@ -6,7 +6,5 @@ brew cask install spotify
 brew cask install slack
 brew cask install caffeine
 brew cask install dashlane
-brew cask install virtualbox
-brew cask install vagrant
 brew cask install vlc
-brew cask install vscode
+brew cask install hyper

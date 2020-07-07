@@ -15,11 +15,11 @@ fi;
 echo -e "\033[32mInstalling Homebrew\033[0m"
 
 if ! exists brew; then
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)";
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)";
 fi;
 
 echo "···· Tapping dependencies"
-brew tap caskroom/cask
+brew tap homebrew/cask-cask
 
 echo "···· Installing packages"
 brew install git
@@ -58,7 +58,11 @@ echo -e "\033[32mSetting Up OSX\033[0m"
 bash "$DOTS/.osx"
 
 # 6) Node
-echo -e "\033[32mSetting Up Node\033[0m"
+echo -e "\033[32mSetting Up NVM\033[0m"
 
-nvm use 10
-npm install -g yarn
+mkdir ~/.nvm
+
+if exists nvm; then
+    nvm use 12
+    npm install -g yarn
+fi;
