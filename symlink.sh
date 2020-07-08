@@ -23,7 +23,7 @@ done
 
 echo "···· Linking ZSH"
 
-symlink "$DOTS/zsh/.zshrc" "$HOME/.zshrc"
+symlink "$DOTS/zsh/config.sh" "$HOME/.zshrc"
 
 echo "···· Linking Atom"
 

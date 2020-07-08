@@ -7,7 +7,6 @@ export ZSH_CUSTOM="$HOME/.oh-my-zsh/custom"
 
 # Setup zsh
 ZSH_THEME="agnoster"
-ZSH_DISABLE_COMPFIX=true
 DISABLE_UPDATE_PROMPT=true # Autoupdate by default
 DEFAULT_USER=$USER # Hide username from zsh theme
 
@@ -26,12 +25,13 @@ if type brew &>/dev/null; then
   compinit
 fi
 
+# Setup nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
 # Source aliases and exports
 source "$ZSH/oh-my-zsh.sh"
 source "$HOME/.dotfiles/zsh/aliases.sh"
 source "$HOME/.dotfiles/zsh/exports.sh"
-
-# NVM setup
-export NVM_DIR="$HOME/.nvm"
-[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+source "$HOME/.dotfiles/zsh/config-work.sh"
