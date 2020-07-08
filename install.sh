@@ -18,15 +18,15 @@ if ! exists brew; then
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)";
 fi;
 
-echo "···· Tapping dependencies"
-brew tap homebrew/cask-cask
+# echo "···· Tapping dependencies"
+# brew tap homebrew/cask-cask
 
 echo "···· Installing packages"
 brew install git
 brew install scmpuff
 brew install curl
 brew install openssl
-brew install fish
+brew install zsh-completions
 brew install nvm
 
 echo "···· Verifying install"
@@ -35,11 +35,11 @@ brew doctor
 # 2) Symlink
 bash "$DOTS/symlink.sh"
 
-# 3) Fish
-echo -e "\033[32mSetting Up Fish\033[0m"
+# 3) ZSH
+echo -e "\033[32mSetting Up ZSH\033[0m"
 
-curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
-fish -c fisher
+chsh -s $(which zsh)
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # 4) Git
 echo -e "\033[32mSetting Up Git\033[0m"

@@ -21,11 +21,9 @@ for from in $(find $DOTS -name ".*" -type f -maxdepth 1); do
     symlink $from $to;
 done
 
-echo "···· Linking Fish"
+echo "···· Linking ZSH"
 
-mkdir -p "$HOME/.config/fish"
-symlink "$DOTS/fish/config.fish" "$HOME/.config/fish/config.fish"
-symlink "$DOTS/fish/plugins" "$HOME/.config/fish/fishfile"
+symlink "$DOTS/zsh/.zshrc" "$HOME/.zshrc"
 
 echo "···· Linking Atom"
 

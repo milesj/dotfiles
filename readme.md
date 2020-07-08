@@ -6,22 +6,21 @@ install them!
 ### Install
 
 This will clone the repository to the home directory and run the installation script. The script
-will install Homebrew and its packages, symlink configuration dotfiles, setup Git, OSX, Atom,
-VSCode, and more.
+will install Homebrew and its packages, symlink configuration dotfiles, setup Git, OSX, ZSH, VSCode,
+and more.
 
 ```
 git clone git@github.com:milesj/dotfiles.git ~/.dotfiles
 bash ~/.dotfiles/install.sh
 ```
 
-Will install the following:
+Also install the following:
 
-- Fish shell
-- Tools: Homebrew, Git, Vim
-- Applications: Chrome, Firefox, Spotify, Slack, and many more
-- Atom + VSCode Packages (apps must be installed first)
-
-Then add `/usr/local/bin/fish` support to `/etc/shells` and run `chsh -s /usr/local/bin/fish`.
+```bash
+bash ~/.dotfiles/install-zsh-plugins.sh
+bash ~/.dotfiles/install-brew-apps.sh
+bash ~/.dotfiles/install-vscode-extensions.sh
+```
 
 And finally, install the Powerline fonts. https://github.com/powerline/fonts
 

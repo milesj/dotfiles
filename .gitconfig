@@ -1,6 +1,6 @@
 [user]
     name = Miles Johnson
-    email = mileswjohnson@gmail.com
+    email =
 [core]
     editor = vim
     excludesFile = ~/.gitignore_global

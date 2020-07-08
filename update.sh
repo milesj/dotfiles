@@ -20,11 +20,5 @@ git pull --rebase origin master
 git stash apply
 git stash clear
 
-# 3) Fish
-echo -e "\033[32mUpdating Fish\033[0m"
-
-fish -c fisher
-fisher self-update
-
 # 4) Symlink
 bash "$DOTS/symlink.sh"

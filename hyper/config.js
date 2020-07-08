@@ -92,7 +92,7 @@ module.exports = {
       lightWhite: '#FFFFFF',
     },
 
-    // the shell to run when spawning a new session (i.e. /usr/local/bin/fish)
+    // the shell to run when spawning a new session (i.e. /usr/local/bin/zsh)
     // if left empty, your system's login shell will be used by default
     //
     // Windows
@@ -104,7 +104,7 @@ module.exports = {
     //
     // PowerShell on Windows
     // - Example: `C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe`
-    shell: '/usr/local/bin/fish',
+    // shell: '/bin/zsh',
 
     // for setting shell arguments (i.e. for using interactive shellArgs: `['-i']`)
     // by default `['--login']` will be used
