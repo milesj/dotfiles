@@ -2,6 +2,14 @@
 // which will not automatically be merged into this file.
 // See https://hyper.is#cfg for all currently supported options.
 
+const red = '#FF3B30';
+const green = '#4CD964';
+const yellow = '#FFCC00';
+const blue = '#0095FF';
+const magenta = '#FF2D55';
+const cyan = '#5AC8FA';
+const white = '#e3e3e3';
+
 module.exports = {
   config: {
     // choose either `'stable'` for receiving highly polished,
@@ -13,7 +21,7 @@ module.exports = {
 
     // font family with optional fallbacks
     fontFamily:
-      'Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", "Source Code Pro for Powerline", monospace',
+      '"SF Mono", "Monaco", "Inconsolata", "Fira Mono", "Droid Sans Mono", "Source Code Pro for Powerline", "Source Code Pro", monospace',
 
     // default font weight: 'normal' or 'bold'
     fontWeight: 'normal',
@@ -47,7 +55,7 @@ module.exports = {
     backgroundColor: 'rgba(0, 0, 0, .85)',
 
     // terminal selection color
-    selectionColor: 'rgba(248, 28, 229, .3)',
+    selectionColor: 'rgba(0, 149, 255, 0.65)',
 
     // border color (window, tabs)
     borderColor: '#333',
@@ -75,13 +83,13 @@ module.exports = {
     // an array here instead of a color map object
     colors: {
       black: '#000000',
-      red: '#C51E14',
-      green: '#1DC121',
-      yellow: '#C7C329',
-      blue: '#0A2FC4',
-      magenta: '#C839C5',
-      cyan: '#20C5C6',
-      white: '#C7C7C7',
+      red,
+      green,
+      yellow,
+      blue,
+      magenta,
+      cyan,
+      white,
       lightBlack: '#686868',
       lightRed: '#FD6F6B',
       lightGreen: '#67F86F',
@@ -144,13 +152,6 @@ module.exports = {
     // The number of rows to be persisted in terminal buffer for scrolling
     scrollback: 10000,
 
-    // Theme overrides
-    verminal: {
-      fontFamily:
-        '"SF Mono", "Monaco", "Inconsolata", "Fira Mono", "Droid Sans Mono", "Source Code Pro for Powerline", "Source Code Pro", monospace',
-      backgroundColor: 'rgba(0, 0, 0, .80)',
-    },
-
     // for advanced config flags please refer to https://hyper.is/#cfg
   },
 
@@ -160,7 +161,7 @@ module.exports = {
   //   `hyperpower`
   //   `@company/project`
   //   `project#1.0.1`
-  plugins: ['hypercwd', 'hyper-search', 'verminal'],
+  plugins: ['hypercwd', 'hyper-search'],
 
   // in development, you can create a directory under
   // `~/.hyper_plugins/local/` and include it here
