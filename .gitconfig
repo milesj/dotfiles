@@ -13,7 +13,7 @@
     pager = /usr/local/share/git-core/contrib/diff-highlight/diff-highlight | less
     sparseCheckout = true
 [push]
-    default = current
+    default = simple
     followTags = true
 [pull]
     ff = false
@@ -56,6 +56,7 @@
 [log]
     decorate = full
 [status]
+    showUntrackedFiles = all
     submoduleSummary = true
 [apply]
     whitespace = fix
@@ -68,3 +69,5 @@
     required = true
 [protocol]
     version = 2
+[pager]
+    branch = false
