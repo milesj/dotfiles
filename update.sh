@@ -16,6 +16,7 @@ echo -e "\033[32mUpdating Git\033[0m"
 
 cd $DOTS
 git stash
+git checkout origin master
 git pull --rebase origin master
 git stash apply
 git stash clear

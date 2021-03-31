@@ -24,6 +24,10 @@ defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 # Only use UTF-8 in Terminal.
 defaults write com.apple.terminal StringEncodings -array 4
 
+# Setup iTerm2 to use the settings folder
+defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "~/dotfiles/iterm"
+defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
+
 ###############################################################################
 # Peripherals                                                                 #
 ###############################################################################

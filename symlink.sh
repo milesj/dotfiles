@@ -37,11 +37,11 @@ mkdir -p "$HOME/Library/Application Support/Code/User"
 symlink "$DOTS/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
 symlink "$DOTS/vscode/snippets.json" "$HOME/Library/Application Support/Code/User/snippets/javascript.code-snippets"
 
-echo ".... Linking Hyper"
+# echo ".... Linking Hyper"
 
-mkdir -p "$HOME/Library/Application Support/Hyper"
-symlink "$DOTS/hyper/config.js" "$HOME/Library/Application Support/Hyper/.hyper.js"
-symlink "$DOTS/hyper/config.js" "$HOME/.hyper.js"
+# mkdir -p "$HOME/Library/Application Support/Hyper"
+# symlink "$DOTS/hyper/config.js" "$HOME/Library/Application Support/Hyper/.hyper.js"
+# symlink "$DOTS/hyper/config.js" "$HOME/.hyper.js"
 
 echo ".... Linking VIM"
 

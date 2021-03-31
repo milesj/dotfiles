@@ -15,7 +15,7 @@ fi;
 echo -e "\033[32mInstalling Homebrew\033[0m"
 
 if ! exists brew; then
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)";
+    bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi;
 
 # echo "···· Tapping dependencies"
@@ -63,6 +63,6 @@ echo -e "\033[32mSetting Up NVM\033[0m"
 mkdir ~/.nvm
 
 if exists nvm; then
-    nvm use 12
+    nvm use 14
     npm install -g yarn
 fi;
