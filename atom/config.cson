@@ -31,10 +31,10 @@
       "autocomplete-ruby"
       "linter-ui-default"
       "linter"
-      "tree-view"
       "language-php"
       "image-view"
       "git-diff"
+      "whitespace"
     ]
     openEmptyEditorOnStart: false
     projectHome: "~/Sites/"
@@ -229,7 +229,7 @@
   "one-dark-ui": {}
   "prettier-atom":
     formatOnSaveOptions:
-      enabled: true
+      enabled: false
       isDisabledIfNotInPackageJson: true
     prettierOptions:
       printWidth: 100
@@ -244,7 +244,9 @@
     iconSize: "16px"
     position: "Left"
   "tree-view":
+    alwaysOpenExisting: true
     hideIgnoredNames: true
+    hideVcsIgnoredFiles: true
   welcome:
     showOnStartup: false
   whitespace: {}
