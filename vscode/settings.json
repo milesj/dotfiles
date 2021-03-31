@@ -6,6 +6,7 @@
     "javascriptreact",
     "typescriptreact"
   ],
+  "bazel.buildifierFixOnFormat": true,
   "breadcrumbs.enabled": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": false
@@ -23,7 +24,7 @@
   "editor.wordWrapColumn": 100,
   "emmet.showExpandedAbbreviation": "inMarkupAndStylesheetFilesOnly",
   "eslint.alwaysShowStatus": true,
-  "eslint.autoFixOnSave": false,
+  "eslint.autoFixOnSave": true,
   "eslint.packageManager": "yarn",
   "eslint.run": "onSave",
   "eslint.validate": [
@@ -34,7 +35,8 @@
   ],
   "files.associations": {
     "Vagrantfile": "ruby",
-    "Dockerfile.dev": "docker"
+    "Dockerfile.dev": "docker",
+    "*.ejs": "ejs"
   },
   "files.autoGuessEncoding": false,
   "files.autoSave": "onFocusChange",
@@ -52,11 +54,8 @@
     "story.ts": "storybook",
     "story.tsx": "storybook"
   },
-  "todohighlight.keywords": [
-    "TODO",
-    "FIXME"
-  ],
-  "typescript.updateImportsOnFileMove.enabled": "never",
+  "search.followSymlinks": false,
+  "todohighlight.keywords": ["TODO", "FIXME"],
   "update.enableWindowsBackgroundUpdates": true,
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "window.zoomLevel": 0,
@@ -64,16 +63,25 @@
   "workbench.colorTheme": "Atom One Dark",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.statusBar.visible": true,
+  "[ejs]": {
+    "editor.formatOnSave": false
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "[typescriptreact]": {
+  "[mdx]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
 }

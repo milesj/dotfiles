@@ -234,29 +234,21 @@
       "];"
     ]
   },
-  "anonymous function": {
-    "prefix": "f",
-    "body": "function (${1}) {${0}}"
-  },
   "named function": {
     "prefix": "fn",
     "body": "function ${1:name}(${2}) {${0}}"
   },
-  "async anonymous function": {
-    "prefix": "asf",
-    "body": "async function (${1}) {${0}}"
-  },
   "async named function": {
-    "prefix": "asfn",
-    "body": "async function ${1:name} (${2}) {${0}}"
+    "prefix": "afn",
+    "body": "async function ${1:name}(${2}) {${0}}"
   },
   "arrow function": {
     "prefix": "af",
-    "body": "(${1}) => ${2:statement};"
-  },
-  "arrow function with body": {
-    "prefix": "afn",
     "body": "(${1}) => {${0}};"
+  },
+  "async arrow function": {
+    "prefix": "aaf",
+    "body": "async (${1}) => {${0}};"
   },
   "generator": {
     "prefix": "gf",
@@ -649,7 +641,7 @@
     "body": [
       "export interface ${1:ComponentName}Props {}",
       "",
-      "export default class ${1:ComponentName} extends React.Component<${1:ComponentName}Props> {",
+      "export class ${1:ComponentName} extends React.Component<${1:ComponentName}Props> {",
       "  render() {",
       "    return ${2:null};",
       "  }",
@@ -661,7 +653,7 @@
     "body": [
       "export interface ${1:ComponentName}Props {}",
       "",
-      "export default class ${1:ComponentName} extends React.PureComponent<${1:ComponentName}Props> {",
+      "export class ${1:ComponentName} extends React.PureComponent<${1:ComponentName}Props> {",
       "  render() {",
       "    return ${2:null};",
       "  }",
@@ -673,7 +665,7 @@
     "body": [
       "export interface ${1:ComponentName}Props {}",
       "",
-      "export default function ${1:ComponentName}(props: ${1:ComponentName}Props) {",
+      "export function ${1:ComponentName}(props: ${1:ComponentName}Props) {",
       "  return ${2:null};",
       "}"
     ]
@@ -693,6 +685,10 @@
   "ts-ignore": {
     "prefix": "tsi",
     "body": "// @ts-ignore ${1}"
+  },
+  "ts-expect-error": {
+    "prefix": "tsee",
+    "body": "// @ts-expect-error ${1}"
   },
   "istanbul ignore next": {
     "prefix": "iin",
