@@ -9,11 +9,12 @@
   "bazel.buildifierFixOnFormat": true,
   "breadcrumbs.enabled": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": false
+    "source.fixAll.eslint": true
   },
   "editor.fontLigatures": true,
   "editor.fontSize": 14,
   "editor.formatOnSave": true,
+  "editor.insertSpaces": false,
   "editor.minimap.enabled": false,
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.renderWhitespace": "all",
@@ -24,7 +25,6 @@
   "editor.wordWrapColumn": 100,
   "emmet.showExpandedAbbreviation": "inMarkupAndStylesheetFilesOnly",
   "eslint.alwaysShowStatus": true,
-  "eslint.autoFixOnSave": true,
   "eslint.packageManager": "yarn",
   "eslint.run": "onSave",
   "eslint.validate": [
@@ -42,7 +42,9 @@
   "files.autoSave": "onFocusChange",
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
-  "git.checkoutType": "local",
+  "git.checkoutType": [
+    "local"
+  ],
   "go.formatOnSave": true,
   "go.formatTool": "gofmt",
   "go.lintOnSave": "file",
@@ -55,7 +57,11 @@
     "story.tsx": "storybook"
   },
   "search.followSymlinks": false,
-  "todohighlight.keywords": ["TODO", "FIXME"],
+  "todohighlight.keywords": [
+    "TODO",
+    "FIXME"
+  ],
+  "typescript.updateImportsOnFileMove.enabled": "always",
   "update.enableWindowsBackgroundUpdates": true,
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "window.zoomLevel": 0,
@@ -79,9 +85,14 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.insertSpaces": true
   },
   "[mdx]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.insertSpaces": true
   }
 }
