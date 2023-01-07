@@ -18,7 +18,6 @@ Also install the following:
 
 ```bash
 bash ~/.dotfiles/install-zsh-plugins.sh
-bash ~/.dotfiles/install-brew-apps.sh
 bash ~/.dotfiles/install-vscode-extensions.sh
 ```
 

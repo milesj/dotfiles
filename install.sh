@@ -28,6 +28,7 @@ brew install curl
 brew install openssl
 brew install zsh-completions
 brew install nvm
+brew install diff-so-fancy
 
 echo "···· Verifying install"
 brew doctor
@@ -61,8 +62,3 @@ bash "$DOTS/.osx"
 echo -e "\033[32mSetting Up NVM\033[0m"
 
 mkdir ~/.nvm
-
-if exists nvm; then
-    nvm use 14
-    npm install -g yarn
-fi;
