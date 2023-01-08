@@ -25,7 +25,7 @@ defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 defaults write com.apple.terminal StringEncodings -array 4
 
 # Setup iTerm2 to use the settings folder
-defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "~/dotfiles/iterm"
+defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "/Users/miles/.dotfiles/iterm"
 defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
 
 ###############################################################################
