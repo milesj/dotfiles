@@ -12,7 +12,6 @@ DEFAULT_USER=$USER # Hide username from zsh theme
 
 # Install zsh plugins
 plugins=(
-  nvm
   zsh-autosuggestions
   zsh-syntax-highlighting
 )
@@ -28,13 +27,30 @@ fi
 # Setup scmpuff
 eval "$(scmpuff init -s --aliases=false)"
 
-# Setup nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# moon
+export PATH="$HOME/.moon/bin:$PATH"
+
+# proto
+export PROTO_HOME="$HOME/.proto"
+export PATH="$PROTO_HOME/shims:$PROTO_HOME/bin:$PATH"
+
+# rust
+export CARGO_TARGET_DIR="$HOME/.cargo/shared-target"
+
+# go
+export GOBIN="$HOME/go/bin"
+export PATH="$GOBIN:$PATH"
+
+# Wasm
+export WASMTIME_HOME="$HOME/.wasmtime"
+export PATH="$WASMTIME_HOME/bin:$PATH"
 
 # Source aliases and exports
 source "$ZSH/oh-my-zsh.sh"
 source "$HOME/.dotfiles/zsh/aliases.sh"
 source "$HOME/.dotfiles/zsh/exports.sh"
 source "$HOME/.dotfiles/zsh/config-work.sh"
+
+# Must be last!
+# export PROTO_LOG=trace
+# eval "$(proto activate zsh)"

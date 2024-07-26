@@ -18,16 +18,12 @@ if ! exists brew; then
     bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi;
 
-# echo "···· Tapping dependencies"
-# brew tap homebrew/cask-cask
-
 echo "···· Installing packages"
 brew install git
 brew install scmpuff
 brew install curl
 brew install openssl
 brew install zsh-completions
-brew install nvm
 brew install diff-so-fancy
 
 echo "···· Verifying install"
@@ -57,8 +53,3 @@ git config --global user.email "$email"
 echo -e "\033[32mSetting Up OSX\033[0m"
 
 bash "$DOTS/.osx"
-
-# 6) Node
-echo -e "\033[32mSetting Up NVM\033[0m"
-
-mkdir ~/.nvm

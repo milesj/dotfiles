@@ -11,9 +11,11 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
+  "editor.fontFamily": "'Source Code Pro', 'Cascadia Code', Menlo, Monaco, 'Courier New', monospace",
   "editor.fontLigatures": true,
-  "editor.fontSize": 14,
+  "editor.fontSize": 15,
   "editor.formatOnSave": true,
+  "editor.inlineSuggest.enabled": true,
   "editor.insertSpaces": false,
   "editor.minimap.enabled": false,
   "editor.multiCursorModifier": "ctrlCmd",
@@ -36,15 +38,15 @@
   "files.associations": {
     "Vagrantfile": "ruby",
     "Dockerfile.dev": "docker",
-    "*.ejs": "ejs"
+    "*.ejs": "ejs",
+    ".prototools": "toml",
+    ".prototools.*": "toml"
   },
   "files.autoGuessEncoding": false,
   "files.autoSave": "onFocusChange",
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
-  "git.checkoutType": [
-    "local"
-  ],
+  "git.checkoutType": ["local"],
   "go.formatOnSave": true,
   "go.formatTool": "gofmt",
   "go.lintOnSave": "file",
@@ -57,14 +59,10 @@
     "story.tsx": "storybook"
   },
   "search.followSymlinks": false,
-  "todohighlight.keywords": [
-    "TODO",
-    "FIXME"
-  ],
+  "todohighlight.keywords": ["TODO", "FIXME"],
   "typescript.updateImportsOnFileMove.enabled": "always",
   "update.enableWindowsBackgroundUpdates": true,
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "window.zoomLevel": 0,
   "workbench.activityBar.visible": true,
   "workbench.colorTheme": "Atom One Dark",
   "workbench.iconTheme": "material-icon-theme",
@@ -95,7 +93,9 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.insertSpaces": true
   },
+  "rust-analyzer.hover.actions.run.enable": false,
+  "rust-analyzer.imports.granularity.group": "module",
+  "rust-analyzer.inlayHints.chainingHints.enable": false,
   "rust-analyzer.inlayHints.parameterHints.enable": false,
-  "rust-analyzer.inlayHints.typeHints.enable": false,
-  "rust-analyzer.inlayHints.chainingHints.enable": false
+  "rust-analyzer.inlayHints.typeHints.enable": false
 }
